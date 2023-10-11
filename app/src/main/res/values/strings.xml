@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">App_Banhangtructuyen</string>
+    <string name="action_home">Home</string>
+    <string name="action_cart">Giỏ hàng</string>
+    <string name="action_thongbao">Thông báo</string>
+    <string name="action_user">Hồ sơ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
