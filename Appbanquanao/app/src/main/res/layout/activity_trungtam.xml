@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Trungtam">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/back"
+        android:gravity="center"
+        android:layout_height="70dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trung tâm hỗ trợ"
+            android:textSize="25dp"
+            android:textStyle="bold"></TextView>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/phimback"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:layout_height="60dp">
+        <Button
+            android:id="@+id/backve"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/caretleft"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+        </Button>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/phimback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+    </RelativeLayout>
+    <!-- main -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/actor"
+                >
+            </ImageView>
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="Bạn có câu hỏi về:"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </TextView>
+        </LinearLayout>
+        <ListView
+            android:id="@+id/lvtthh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+    </LinearLayout>
+    <!-- bt -->
+    <RelativeLayout
+        android:background="@drawable/btg"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:paddingRight="18dp"
+                android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_marginRight="18dp"
+                android:layout_width="24dp"
+                android:background="@drawable/vector"
+                android:layout_height="24dp">
+            </Button>
+            <EditText
+                android:paddingRight="10dp"
+                android:drawableRight="@drawable/actor"
+                android:layout_width="match_parent"
+                android:background="@drawable/backgredit"
+                android:layout_height="40dp">
+            </EditText>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
