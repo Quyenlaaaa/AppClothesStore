@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Activity_huydonhang">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/back"
+        android:gravity="center"
+        android:layout_height="70dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xem thông tin đơn hàng"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"></TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/phimback"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:layout_height="60dp">
+        <Button
+            android:id="@+id/backve"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/caretleft"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+        </Button>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/diachi"
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvname"
+            android:padding="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="Giao hàng đến"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/diachigiao"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="62dp"
+            android:layout_marginLeft="20dp"
+            android:text="Địa chỉ: "
+            android:textSize="18sp"></TextView>
+        <TextView
+            android:id="@+id/data_diachi"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="62dp"
+            android:layout_marginLeft="90dp"
+            android:text="48 Cao Thắng"
+            android:textSize="18sp"></TextView>
+        <TextView
+            android:id="@+id/tv_thoigian"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:layout_marginLeft="20dp"
+            android:text="Thời gian dự kiến: "
+            android:textSize="18sp"></TextView>
+        <TextView
+            android:id="@+id/data_thoigian"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:layout_marginLeft="170dp"
+
+            android:text="13h - 17h Ngày 22/12/2023"
+            android:textSize="18sp"></TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hanghoa"
+        android:layout_width="match_parent"
+        android:layout_marginTop="210dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tx"
+            android:padding="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="Tên nhà bán hàng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <ListView
+            android:id="@+id/lvquanao"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/tx"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp">
+
+        </ListView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/them"
+        android:layout_below="@id/hanghoa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:id="@+id/scr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/them">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/tieude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tổng cộng (2 món)"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp">
+                </TextView>
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentRight="true"
+                    android:text="270.000đ"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/tc"
+                android:layout_below="@+id/tieude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phí giao hàng"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentRight="true"
+                    android:text="15.000đ"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/phi"
+                android:layout_below="@+id/tc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giảm giá:"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    >
+                </TextView>
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentRight="true"
+                    android:text="20.000đ"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tc"
+                android:layout_marginTop="29dp">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Tổng:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="16dp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="10dp"
+                    android:text="265.000đ"></TextView>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnmua"
+                android:layout_width="175dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/phi"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="97dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_huydonhang"
+                android:text="Hủy đơn hàng"
+                android:textColor="@color/white">
+
+            </Button>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

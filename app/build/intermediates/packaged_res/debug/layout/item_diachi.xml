@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp">
+
+    <ImageView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/icon_location"
+        android:layout_width="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="30dp"
+        android:src="@drawable/baseline_location" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/icon_location"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/tv_info_user"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Lê Văn A - 012345678"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="30/38 Hải Hồ, P. Thạch Thang, Q. Hải Châu, TP. Đà Nẵng  "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <ImageView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/icon_careright2"
+        android:layout_width="30dp"
+        android:layout_marginLeft="330dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/caretright2" />
+</RelativeLayout>

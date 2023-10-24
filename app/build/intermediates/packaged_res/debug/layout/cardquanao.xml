@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgao"
+            android:src="@drawable/ao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <TextView
+            android:padding="10dp"
+            android:text="x1 Áo sơ mi"
+            android:layout_centerVertical="true"
+            android:id="@+id/tvao"
+            android:layout_toRightOf="@+id/imgao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:text="50000đ"
+            android:layout_centerVertical="true"
+            android:id="@+id/tvgia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>
