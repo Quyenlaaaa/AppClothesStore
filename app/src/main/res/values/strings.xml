@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">taolao</string>
+    <string name="title_activity_ddadat">ddadat</string>
+
+    <string-array name="dadat1">
+        <item>Trang thai</item>
+        <item>Chua mua</item>
+        <item>Da mua</item>
+    </string-array>
+
+    <string-array name="dadat2">
+        <item>29/2/2003</item>
+        <item>30/6/2976</item>
+    </string-array>
+
+    <string-array name="dadat3">
+        <item>Trang thai</item>
+        <item>Chua mua</item>
+        <item>Da mua</item>
+    </string-array>
+
+    <string-array name="dadat4">
+        <item>29/2/2003</item>
+        <item>30/6/2976</item>
+    </string-array>
+</resources>
