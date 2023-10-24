@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Activity_Suadiachi1">
+
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Địa chỉ"
+                android:textSize="30dp"
+                android:textStyle="bold"></TextView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/phimback"
+            android:layout_width="match_parent"
+
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/back_xacnhan"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/caretleft"></Button>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phimback">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/edittext"
+                        android:layout_width="304dp"
+                        android:layout_height="51dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/backgredit"
+                        android:drawableLeft="@drawable/baseline_search_24"
+                        android:gravity="center_vertical"
+                        android:hint="Tìm địa điểm hiện tại của bạn"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textSize="14dp"></EditText>
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="60dp"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="333dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/map" />
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Các địa điểm đã lưu"
+                    android:textSize="15dp"/>
+                <RelativeLayout
+                    android:id="@+id/diachi"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="110dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/home"
+                        android:layout_width="60dp"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/house" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Nhà"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:id="@+id/diachinha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginLeft="80dp"
+                        android:text="Các địa điểm đã lưu"
+                        android:textSize="15dp"/>
+
+                    <Button
+                        android:id="@+id/chinhsua_diachinha"
+                        android:layout_marginLeft="350dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/chinhsua"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp">
+                    </Button>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/diachi1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="180dp">
+
+                    <ImageView
+                        android:id="@+id/home1"
+                        android:layout_width="60dp"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/bag" />
+
+                    <TextView
+                        android:id="@+id/tv_name1"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Công ty"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/diachicongty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="35dp"
+                        android:text="Các địa điểm đã lưu"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/chuyentiep1"
+                        android:layout_marginLeft="350dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/caretright"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp">
+                    </Button>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/hotel1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="246dp">
+
+                    <ImageView
+                        android:id="@+id/hotel"
+                        android:layout_width="60dp"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/bookmark" />
+
+                    <TextView
+                        android:id="@+id/tv_hotel"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Nhà"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/diachihotel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="35dp"
+                        android:text="Các địa điểm đã lưu"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/chinhsua_diachihotel"
+                        android:layout_marginLeft="350dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/chinhsua"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp">
+                    </Button>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/themdiachi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="310dp">
+
+                    <ImageView
+                        android:id="@+id/icon_add"
+                        android:layout_width="60dp"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/add" />
+
+                    <TextView
+                        android:id="@+id/tv_adddiachi"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Thêm địa chỉ"
+                        android:textColor="#0B8710"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>

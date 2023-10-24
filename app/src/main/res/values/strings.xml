@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Xacnhan</string>
+    <string-array name="spin">
+        <item>Tiền mặt</item>
+        <item>Momo</item>
+        <item>Zalopay</item>
+    </string-array>
+</resources>

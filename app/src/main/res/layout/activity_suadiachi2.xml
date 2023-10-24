@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Activity_Suadiachi1">
+
+    <RelativeLayout
+        android:id="@+id/bths"
+        android:layout_width="match_parent"
+        android:layout_height="577dp">
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sửa địa chỉ"
+                android:textSize="30dp"
+                android:textStyle="bold"></TextView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/phimback"
+            android:layout_width="match_parent"
+
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/back_suadiachi1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/caretleft"></Button>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phimback">
+
+            <RelativeLayout
+                android:id="@+id/diachi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Tên"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:layout_width="330dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="35dp"
+                    android:hint="Vd:Trường học, Phòng tập" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp">
+
+                <TextView
+                    android:id="@+id/ed_ten"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Địa chỉ"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:layout_width="330dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="35dp"
+                    android:hint="Nhập địa chỉ" />
+
+                <Button
+                    android:id="@+id/chuyentiep2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="350dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/caretright"></Button>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ten2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="220dp">
+
+                <TextView
+                    android:id="@+id/ed_ten2"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Tòa nhà"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:layout_width="330dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="35dp"
+                    android:hint="Số nhà, số tầng" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ten3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="310dp">
+
+                <EditText
+                    android:layout_width="330dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:hint="Ghi chú cho tài xế" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/bt_luu"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="410dp"
+                android:layout_marginRight="150dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_huydonhang"
+                android:text="Lưu"
+                android:textColor="@color/white">
+
+            </Button>
+        </RelativeLayout>
+    </RelativeLayout>
+    </RelativeLayout>
