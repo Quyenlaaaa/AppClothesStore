@@ -41,11 +41,6 @@ public class HomeActivity extends AppCompatActivity {
                     fragment = new FragmentCart();
                     loadFragment(fragment);
                 }
-                if(item.getItemId() == R.id.iconthongbao)
-                {
-                    fragment = new FragmentThongBao();
-                    loadFragment(fragment);
-                }
                 if(item.getItemId() == R.id.iconuser)
                 {
                     fragment = new FragmentUser();

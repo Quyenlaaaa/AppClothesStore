@@ -6,15 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".activity.DetailActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/sanpham"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/sanpham"
+            />
+
+        <ImageView
+            android:id="@+id/iconbackhome"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/caretleft"
+            android:background="@drawable/backgroundcareleft"
+            android:contentDescription="Trở về"
+            android:onClick="goBack"
+            tools:ignore="TouchTargetSizeCheck" />
+    </FrameLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,9 +81,10 @@
             android:layout_marginBottom="10dp">
 
             <TextView
+                android:id="@+id/dongia"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="150.000đ"
+                android:text="150000"
                 android:textAlignment="center"
                 android:layout_gravity="center"
                 android:textSize="24sp"
@@ -77,6 +97,7 @@
                 android:layout_marginStart="100dp">
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btntru"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/icontru"
@@ -84,6 +105,7 @@
                     tools:ignore="TouchTargetSizeCheck"
                     android:contentDescription="Mô tả cho nút"/>
                 <TextView
+                    android:id="@+id/soluong"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:text="1"
@@ -94,6 +116,7 @@
                     android:layout_gravity="center"/>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btncong"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/iconcong"
@@ -104,6 +127,7 @@
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/themvaogiohang"
             android:layout_width="350dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
@@ -115,7 +139,6 @@
             android:textStyle="bold"/>
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

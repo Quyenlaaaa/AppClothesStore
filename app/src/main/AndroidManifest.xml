@@ -15,6 +15,36 @@
         android:theme="@style/Theme.App_Banhangtructuyen"
         tools:targetApi="31">
         <activity
+            android:name=".activity.DonHangCuaToiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SuaDiaChiNhanHangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ChiTietDonHangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.XacNhanDonHangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.XoaTaiKhoanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.TrungTamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DieuKhoanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HoTroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CaiDatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HosoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.DetailActivity"
             android:exported="false" />
         <activity

@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 
@@ -24,7 +25,8 @@ public class TimKiemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tim_kiem);
         ShowSanPham();
-        ActionBackHome();
+        ClickItemSanpham();
+
 
     }
     public  void ShowSanPham(){
@@ -42,15 +44,20 @@ public class TimKiemActivity extends AppCompatActivity {
         SanphamAdapter adapter = new SanphamAdapter(this,arrayList);
         recyclerView.setAdapter(adapter);
     }
-    public void ActionBackHome(){
-        ImageView iconbackhome = findViewById(R.id.iconbackhome);
-        iconbackhome.setOnClickListener(new View.OnClickListener() {
+    public void ClickItemSanpham(){
+        GridView gridView = (GridView) findViewById(R.id.tksanpham);
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.frame_container, new FragmentHome());
-                fragmentTransaction.commit();
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(TimKiemActivity.this, DetailActivity.class);
+                startActivity(intent);
             }
         });
     }
+    public void goBack(View view) {
+        // Đóng hoạt động hiện tại và quay lại hoạt động trước đó
+        finish();
+    }
+
+
 }

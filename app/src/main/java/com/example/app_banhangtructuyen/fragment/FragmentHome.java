@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -20,6 +21,7 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.example.app_banhangtructuyen.R;
+import com.example.app_banhangtructuyen.activity.DetailActivity;
 import com.example.app_banhangtructuyen.activity.TimKiemActivity;
 import com.example.app_banhangtructuyen.adapter.SanphamAdapter;
 import com.example.app_banhangtructuyen.model.Product;
@@ -78,6 +80,7 @@ public class FragmentHome extends Fragment {
         ActionCategory();
         ActionTimKiem();
         ActionClickTapDanhMuc();
+        ClickItemSanPham();
 
 
         return view;
@@ -168,6 +171,16 @@ public class FragmentHome extends Fragment {
         recyclerView.setAdapter(adapter);
 
 
+    }
+    public  void ClickItemSanPham(){
+        GridView recyclerView = (GridView) view.findViewById(R.id.listsanpham);
+        recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getActivity(), DetailActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

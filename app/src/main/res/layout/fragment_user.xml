@@ -1,16 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.FragmentUser">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/bt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="User"
-        android:gravity="center"
-        android:textSize="30sp"/>
+        android:layout_marginBottom="20dp"
+        android:layout_height="150dp">
+        <ImageView
+            android:id="@+id/avt"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/avatar"
+            >
+        </ImageView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/avt"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Họ và tên"
+                android:layout_marginLeft="30dp"
+                android:textSize="25sp"
+                android:layout_marginTop="90dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content">
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- main -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/bt"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+    </RelativeLayout>
 
-</FrameLayout>
+</RelativeLayout>
