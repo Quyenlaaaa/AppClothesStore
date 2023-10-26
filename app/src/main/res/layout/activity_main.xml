@@ -206,43 +206,11 @@
                     android:layout_marginRight="10dp"
                     android:text="285.000đ"></TextView>
             </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="120dp"
-                android:layout_marginLeft="20dp"
-                android:padding="5dp">
-                <ImageView
-                    android:layout_alignParentLeft="true"
-                    android:id="@+id/icon_time"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/baseline_local_dining" />
-                <TextView
-                    android:id="@+id/tvcd"
-                    android:layout_alignParentLeft="true"
-                    android:layout_width="wrap_content"
-                    android:text="Lấy dụng cụ ăn uống"
-                    android:textSize="15dp"
-                    android:layout_marginLeft="25dp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:layout_height="wrap_content">
-                </TextView>
 
-                <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="15dp"
-                    android:thumb="@drawable/baseline_brightness_1_24"
-                    android:checked="false"
-                    android:track="@drawable/track_selector"></Switch>
-            </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="148dp"
+                android:layout_marginTop="125dp"
                 android:layout_marginLeft="20dp"
                 android:padding="5dp">
                 <ImageView
