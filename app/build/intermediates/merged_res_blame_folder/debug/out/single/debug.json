@@ -1,0 +1,858 @@
+[
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_avartar.webp.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/avartar.webp"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_baseline_access_time.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/baseline_access_time.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_switch_off.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/switch_off.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_baseline_access_time.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/baseline_access_time.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_btg.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/btg.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_caretright2.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/caretright2.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.xacnhan.app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_diag.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/diag.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_vector.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/vector.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_mappin.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/mappin.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_clock.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/clock.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_co.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/co.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_co.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/co.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_add.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/add.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.xacnhan.app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_baseline_brightness_1_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/baseline_brightness_1_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_baseline_local_dining.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/baseline_local_dining.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_house.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/house.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_add.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/add.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_avatar2.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/avatar2.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_chinhsua.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/chinhsua.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/layout_cardquanao.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/layout/cardquanao.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_backgredit.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/backgredit.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_diag.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/diag.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_vector.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/vector.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_btg.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/btg.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_caretright.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/caretright.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_baseline_assignment.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/baseline_assignment.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_caretleft.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/caretleft.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_add.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/add.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_backgredit.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/backgredit.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_mappin.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/mappin.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_baseline_home_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/baseline_home_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_baseline_local_dining.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/baseline_local_dining.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_baseline_brightness_1_24.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/baseline_brightness_1_24.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_ao.png.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/ao.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_baseline_brightness_1_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/baseline_brightness_1_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_khong.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/khong.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_baseline_access_time.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/baseline_access_time.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/layout_item_address.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/layout/item_address.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_chinhsua.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/chinhsua.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.xacnhan.app-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_caretright.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/caretright.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.xacnhan.app-main-33:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_clock.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/clock.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_chinhsua.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/chinhsua.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_nencard.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/nencard.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_house.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/house.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_baseline_home_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/baseline_home_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_switch_on.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/switch_on.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_button_huydonhang.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/button_huydonhang.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_button.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/button.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_caretright.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/caretright.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_clock.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/clock.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_baseline_assignment.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/baseline_assignment.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_clock.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/clock.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_caretright.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/caretright.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_vector.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/vector.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_clock.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/clock.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_diag.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/diag.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/layout_item_thoigian.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/layout/item_thoigian.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_baseline_assignment.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/baseline_assignment.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_diag.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/diag.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_baseline_search_24.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/baseline_search_24.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_chinhsua.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/chinhsua.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_khong.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/khong.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_caretright2.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/caretright2.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_caretleft.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/caretleft.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_huy.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/huy.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_vector.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/vector.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_house.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/house.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_bag.png.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/bag.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.xacnhan.app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_add.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/add.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_baseline_brightness_1_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/baseline_brightness_1_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_mappin.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/mappin.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_caretright2.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/caretright2.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_backgredit.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/backgredit.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_add.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/add.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_co.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/co.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_baseline_location.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/baseline_location.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_huy.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/huy.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_caretright2.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/caretright2.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_phim.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/phim.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/layout_activity_suadiachi1.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/layout/activity_suadiachi1.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_chinhsua.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/chinhsua.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_huy.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/huy.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_map.png.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/map.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_huy.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/huy.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_baseline_access_time.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/baseline_access_time.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_baseline_home_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/baseline_home_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/layout_cardthem.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/layout/cardthem.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.xacnhan.app-main-33:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_baseline_local_dining.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/baseline_local_dining.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/layout_item_suadiachi.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/layout/item_suadiachi.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_diag.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/diag.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_backgredit.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/backgredit.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_backgredit.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/backgredit.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_caretright.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/caretright.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_co.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/co.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_huy.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/huy.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.xacnhan.app-main-33:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_caretleft.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/caretleft.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_button.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/button.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_baseline_brightness_1_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/baseline_brightness_1_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_caretright.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/caretright.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_baseline_assignment.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/baseline_assignment.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_baseline_search_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/baseline_search_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_huy.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/huy.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_caretright2.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/caretright2.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.xacnhan.app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_house.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/house.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_baseline_home_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/baseline_home_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_baseline_home_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/baseline_home_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_house.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/house.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_clock.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/clock.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_caretright.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/caretright.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_baseline_assignment.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/baseline_assignment.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_khong.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/khong.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_baseline_access_time.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/baseline_access_time.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_caretleft.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/caretleft.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_house.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/house.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_mappin.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/mappin.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_button_thanhtoan.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/button_thanhtoan.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_bookmark.png.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/bookmark.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_mappin.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/mappin.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/layout_activity_suadiachi2.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/layout/activity_suadiachi2.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_baseline_location.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/baseline_location.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_baseline_search_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/baseline_search_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_khong.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/khong.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_button.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/button.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_baseline_location.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/baseline_location.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_house.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/house.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_baseline_local_dining.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/baseline_local_dining.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/xml_backup_rules.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_co.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/co.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_khong.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/khong.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_khong.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/khong.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_backgredit.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/backgredit.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_clock.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/clock.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_add.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/add.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_baseline_home_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/baseline_home_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_vector.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/vector.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_baseline_local_dining.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/baseline_local_dining.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_vector.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/vector.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_button.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/button.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_co.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/co.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_caretright2.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/caretright2.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/layout_item_diachi.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/layout/item_diachi.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_btg.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/btg.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_baseline_location.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/baseline_location.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_add.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/add.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_diag.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/diag.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_baseline_local_dining.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/baseline_local_dining.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_mappin.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/mappin.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_baseline_search_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/baseline_search_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_baseline_access_time.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/baseline_access_time.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_button.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/button.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_mappin.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/mappin.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_caretleft.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/caretleft.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_baseline_search_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/baseline_search_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/layout_activity_huydonhang.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/layout/activity_huydonhang.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_chinhsua.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/chinhsua.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_huy.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/huy.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_baseline_search_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/baseline_search_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_caretright2.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/caretright2.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_baseline_assignment.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/baseline_assignment.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/layout_activity_suadiachi3.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/layout/activity_suadiachi3.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.xacnhan.app-main-33:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_button.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/button.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_btg.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/btg.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_khong.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/khong.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_track_selector.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/track_selector.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_btg.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/btg.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_vector.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/vector.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_backgredit.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/backgredit.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_baseline_search_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/baseline_search_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_btg.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/btg.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_baseline_local_dining.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/baseline_local_dining.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_baseline_location.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/baseline_location.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.xacnhan.app-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_btg.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/btg.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_caretleft.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/caretleft.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxxhdpi_baseline_brightness_1_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxxhdpi/baseline_brightness_1_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_chinhsua.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/chinhsua.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xhdpi_diag.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xhdpi/diag.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_baseline_home_24.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/baseline_home_24.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_baseline_assignment.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/baseline_assignment.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-mdpi_baseline_brightness_1_24.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-mdpi/baseline_brightness_1_24.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_baseline_location.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/baseline_location.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-anydpi-v21_caretleft.xml.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-anydpi-v21/caretleft.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_baseline_location.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/baseline_location.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable_spiner.xml.flat",
+        "source": "com.example.xacnhan.app-main-33:/drawable/spiner.xml"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-ldpi_button.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-ldpi/button.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-hdpi_baseline_access_time.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-hdpi/baseline_access_time.png"
+    },
+    {
+        "merged": "com.example.xacnhan.app-merged_res-31:/drawable-xxhdpi_co.png.flat",
+        "source": "com.example.xacnhan.app-pngs-27:/drawable-xxhdpi/co.png"
+    }
+]

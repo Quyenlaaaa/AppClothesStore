@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/img_avartar"
+        android:layout_width="60dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/house" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"
+        android:text="Nhà"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/diachi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="80dp"
+        android:text="Các địa điểm đã lưu"
+        android:textSize="15dp"/>
+
+    <Button
+        android:id="@+id/chinhsua_diachi"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/chinhsua"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+    </Button>
+</RelativeLayout>

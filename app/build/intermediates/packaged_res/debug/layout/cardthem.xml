@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@drawable/nencard"
+        android:padding="5dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgao2"
+            android:src="@drawable/ao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <TextView
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Áo sơ mi"
+            android:layout_alignParentTop="true"
+            android:id="@+id/tvao2"
+            android:layout_toRightOf="@+id/imgao2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:padding="10dp"
+            android:layout_below="@id/tvao2"
+            android:layout_toRightOf="@+id/imgao2"
+            android:text="50000đ"
+            android:id="@+id/tvgia2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:text="+"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#0A895D"
+            >
+
+        </Button>
+    </RelativeLayout>
+
+</RelativeLayout>
