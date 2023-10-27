@@ -1,9 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.DonHangCuaToiActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/back"
+        android:gravity="center"
+        android:layout_height="70dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hỗ trợ"
+            android:textSize="30dp"
+            android:textStyle="bold"></TextView>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/phimback"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/backve"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/caretleft"
+            android:contentDescription="@string/action_cart"
+            android:onClick="goBack"
+            tools:ignore="TouchTargetSizeCheck"></ImageView>
+    </RelativeLayout>
+    <ListView
+        android:layout_marginTop="20dp"
+        android:id="@+id/lvdsdon"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_below="@+id/phimback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+</RelativeLayout>

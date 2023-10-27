@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DanhGiaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/backve"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/caretleft"
+            android:contentDescription="@string/action_cart"
+            android:onClick="goBack"
+            tools:ignore="TouchTargetSizeCheck"></ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đánh giá sản phẩm"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvquanao"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="40dp">
+
+    </ListView>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lvquanao"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="20dp"
+        android:numStars="5"
+        android:progressDrawable="@drawable/custom_rating_bar"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:stepSize="1.0" />
+
+    <EditText
+        android:id="@+id/reviewText"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/ratingBar"
+        android:layout_marginTop="20dp"
+        android:hint="Nhập đánh giá"
+        android:padding="16dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="16dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btxoa"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_dangnhap"
+            android:text="Gửi đánh giá"
+            android:textColor="@color/white"></androidx.appcompat.widget.AppCompatButton>
+    </RelativeLayout>
+    </RelativeLayout>
