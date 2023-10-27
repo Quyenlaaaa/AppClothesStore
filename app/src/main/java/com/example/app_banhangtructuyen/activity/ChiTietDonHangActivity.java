@@ -24,6 +24,15 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chi_tiet_don_hang);
         ShowlistSanPhamChiTiet();
+
+        AppCompatButton button = findViewById(R.id.huydon);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChiTietDonHangActivity.this, LiDoHuyDonActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void goBack(View view) {
