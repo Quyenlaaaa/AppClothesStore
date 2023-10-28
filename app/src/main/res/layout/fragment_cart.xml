@@ -24,12 +24,14 @@
         android:layout_marginTop="65dp"/>
 
     <RelativeLayout
+
         android:id="@+id/duoi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F4E7E7"
         android:layout_marginTop="600dp">
         <LinearLayout
+            android:background="#F4E7E7"
+            android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="20dp"

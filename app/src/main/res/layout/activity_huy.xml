@@ -117,8 +117,7 @@
             android:id="@+id/btxoa"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="40dp"
+            android:layout_margin="25dp"
             android:background="@drawable/button_dangnhap"
             android:text="Xác nhận hủy"
             android:textColor="@color/white">

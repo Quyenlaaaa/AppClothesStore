@@ -75,8 +75,7 @@
             android:id="@+id/btxoa"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="40dp"
+            android:layout_margin="20dp"
             android:background="@drawable/button_dangnhap"
             android:text="Gửi đánh giá"
             android:textColor="@color/white"></androidx.appcompat.widget.AppCompatButton>

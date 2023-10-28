@@ -36,7 +36,7 @@
             android:layout_height="match_parent">
             <TextView
                 android:layout_width="match_parent"
-                android:text="ĐIỀU KHOẢN SỬ DỤNG"
+                android:text="CÁC THÀNH VIÊN"
                 android:textSize="25sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -84,6 +84,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp"
                 android:entries="@array/list4"
+                android:minHeight="48dp"
+                android:padding="8dp"></Spinner>
+            <Spinner
+                android:id="@+id/spiner5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:entries="@array/list5"
                 android:minHeight="48dp"
                 android:padding="8dp"></Spinner>
         </LinearLayout>

@@ -64,6 +64,7 @@ public class FragmentHome extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -78,6 +79,7 @@ public class FragmentHome extends Fragment {
         view= inflater.inflate(R.layout.fragment_home, container, false);
         ActionViewFlipper();
         ActionCategory();
+        ShowSanPham();
         ActionTimKiem();
         ActionClickTapDanhMuc();
         ClickItemSanPham();
@@ -137,12 +139,12 @@ public class FragmentHome extends Fragment {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
+                ShowSanPham();
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
+                ShowSanPham();
             }
         });
     }
@@ -177,8 +179,10 @@ public class FragmentHome extends Fragment {
         recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getActivity(), DetailActivity.class);
-                startActivity(intent);
+
+                    Intent intent = new Intent(getActivity(), DetailActivity.class);
+                        startActivity(intent);
+
             }
         });
     }

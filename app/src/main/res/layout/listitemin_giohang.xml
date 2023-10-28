@@ -19,6 +19,7 @@
         android:layout_height="80dp"
         android:background="@drawable/setupimagesanpham"/>
     <LinearLayout
+        android:id="@+id/textaa"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
@@ -48,11 +49,12 @@
 
     </LinearLayout>
     <LinearLayout
+        android:padding="5dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginStart="10dp">
+        android:layout_marginStart="20dp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btntru"

@@ -43,7 +43,7 @@ public class FragmentUser extends Fragment {
     private String mParam2;
     View view;
     ListView simpleList;
-    String List[] = {"Hồ sơ","Đơn hàng của tôi", "Cài Đặt", "Hỗ trợ", "Điều khoản và Chính sách", "Đăng xuất"};
+    String List[] = {"Hồ sơ","Đơn hàng của tôi", "Cài Đặt", "Hỗ trợ", "Về chúng tôi", "Đăng xuất"};
     int flags[] = {R.drawable.group,R.drawable.iconcart, R.drawable.gear, R.drawable.headphones, R.drawable.warningoctagon, R.drawable.signout};
 
     public FragmentUser() {

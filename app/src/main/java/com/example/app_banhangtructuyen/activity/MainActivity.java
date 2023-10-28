@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.app_banhangtructuyen.R;
 
 public class MainActivity extends AppCompatActivity {
-    TextView txtsignup, txtboqua;
+    TextView txtsignup;
+    Button bt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,19 +25,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        txtboqua.setOnClickListener(new View.OnClickListener() {
+        bt.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
 
+
     }
 
     private void AnhXa() {
         txtsignup = (TextView) findViewById(R.id.txtsignup_login);
-        txtboqua = (TextView) findViewById(R.id.txtboqua_login);
+        bt = (Button) findViewById(R.id.appCompatButton);
+
     }
 
 }

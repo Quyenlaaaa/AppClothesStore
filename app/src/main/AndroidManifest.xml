@@ -15,6 +15,17 @@
         android:theme="@style/Theme.App_Banhangtructuyen"
         tools:targetApi="34">
         <activity
+            android:name=".activity.Huy"
+            android:exported="false"
+            android:label="@string/title_activity_huy"
+            android:theme="@style/Theme.App_Banhangtructuyen" />
+        <activity
+            android:name=".activity.ui.Huy"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Danhgia1"
+            android:exported="false" />
+        <activity
             android:name=".activity.DonHangCuaToiActivity"
             android:exported="false" />
         <activity

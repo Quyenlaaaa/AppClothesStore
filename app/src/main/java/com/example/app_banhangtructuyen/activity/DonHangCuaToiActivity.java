@@ -28,8 +28,8 @@ public class DonHangCuaToiActivity extends AppCompatActivity {
                 {
                     case 0: Intent myintent = new Intent(DonHangCuaToiActivity.this, ChiTietDonHangActivity.class);
                         startActivity(myintent);break;
-                    case 1: Intent myintent1 = new Intent(DonHangCuaToiActivity.this, DanhGiaActivity.class);
-                        startActivity(myintent1); break;
+                    case 1: Intent myintent2 = new Intent(DonHangCuaToiActivity.this, Danhgia1.class);
+                        startActivity(myintent2); break;
                 }
             }
         });

@@ -28,7 +28,7 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
         huyDonButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChiTietDonHangActivity.this, HuyDonActivity.class);
+                Intent intent = new Intent(ChiTietDonHangActivity.this, Huy.class);
                 startActivity(intent);
             }
         });
