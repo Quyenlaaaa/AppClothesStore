@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="50dp"
         android:text="ĐĂNG KÝ"
         android:textColor="#488661"
         android:textSize="30sp"
@@ -25,7 +25,7 @@
         android:id="@+id/iconback_signup"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="58dp"
         android:background="@drawable/icon_back"
         app:layout_constraintEnd_toStartOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.352"
@@ -36,7 +36,7 @@
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
 
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,6 +66,29 @@
             android:layout_marginTop="10dp"
             android:hint="Nhập họ tên">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="320sp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtdiachi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Địa chỉ"
+            android:textColor="#121312"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editdiachi"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Nhập địa chỉ">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="320sp"
@@ -75,26 +98,34 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/txtsodt"
+            android:id="@+id/txtemail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Số điện thoại"
+            android:text="Email"
             android:textColor="#121312"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.126"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconback_signup" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/editsodt"
+            android:id="@+id/editemail"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="Nhập số điện thoại">
+            android:hint="Nhập email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtemail">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editemailInput"
                 android:layout_width="320sp"
                 android:layout_height="wrap_content"
-                android:maxLines="1"/>
+                android:maxLines="1" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -105,8 +136,7 @@
             android:layout_marginTop="10dp"
             android:text="Mật khẩu"
             android:textColor="#121312"
-            android:textSize="18sp"
-            />
+            android:textSize="18sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editpass"
@@ -148,15 +178,13 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:inputType="textPassword"/>
-
         </com.google.android.material.textfield.TextInputLayout>
-
     </LinearLayout>
-
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signup"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button_dangnhap"
         android:text="Đăng ký"
         android:textSize="20sp"
@@ -164,9 +192,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-
-    </androidx.appcompat.widget.AppCompatButton>
-
-
+         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
