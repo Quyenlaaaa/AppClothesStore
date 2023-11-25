@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "882959570383",
+    "firebase_url": "https://shopquanao-3f2d0-default-rtdb.firebaseio.com",
+    "project_id": "shopquanao-3f2d0",
+    "storage_bucket": "shopquanao-3f2d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882959570383:android:abc880708f38bf76c6eeba",
+        "android_client_info": {
+          "package_name": "com.example.app_banhangtructuyen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882959570383-40pqvs3oc2ra1odgstocre8c0v1d7bhn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmWAgXpRoh36ab_H-EHW9fD_hND8OhweQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882959570383-40pqvs3oc2ra1odgstocre8c0v1d7bhn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -116,13 +116,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="Nhập email"
+            android:hint="Nhập Email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtemail">
+            app:layout_constraintTop_toBottomOf="@+id/txtsdt">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editemailInput"
+                android:id="@+id/editsdtInput"
                 android:layout_width="320sp"
                 android:layout_height="wrap_content"
                 android:maxLines="1" />

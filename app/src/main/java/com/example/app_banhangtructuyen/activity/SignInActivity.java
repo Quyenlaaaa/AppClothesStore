@@ -19,17 +19,17 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignInActivity extends AppCompatActivity {
-    private EditText editEmail, editPassword;
+    private EditText editemailPhone, editPassword;
     private Button btsignin;
     private TextView txtsignup;
-    private FirebaseAuth mAuth;
+    private FirebaseAuth fAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        mAuth = FirebaseAuth.getInstance();
-        editEmail = findViewById(R.id.editEmailInput);
+        fAuth = FirebaseAuth.getInstance();
+        editemailPhone = findViewById(R.id.editPhoneInput);
         editPassword = findViewById(R.id.editPasswordInput);
         btsignin = findViewById(R.id.appCompatButton);
         txtsignup = findViewById(R.id.txtsignup);
@@ -51,15 +51,15 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     private void signIn() {
-        String email,pass;
-        email=editEmail.getText().toString();
+        String email_phone,pass;
+        email_phone=editemailPhone.getText().toString();
         pass=editPassword.getText().toString();
 
-        if(TextUtils.isEmpty(email) || TextUtils.isEmpty(pass)){
-            Toast.makeText(this, "Email hoặc mật khẩu trống!", Toast.LENGTH_SHORT).show();
+        if(TextUtils.isEmpty(email_phone) || TextUtils.isEmpty(pass)){
+            Toast.makeText(this, "Eamil/Số điện thoại hoặc mật khẩu trống!", Toast.LENGTH_SHORT).show();
             return;
         }
-        mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        fAuth.signInWithEmailAndPassword(email_phone, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
@@ -69,7 +69,7 @@ public class SignInActivity extends AppCompatActivity {
                     finish();
                 }
                 else {
-                    Toast.makeText(SignInActivity.this, "Email hoặc mật khẩu sai!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInActivity.this, "Email/Số điện thoại hoặc mật khẩu sai!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
