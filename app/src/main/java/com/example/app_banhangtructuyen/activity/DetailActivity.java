@@ -13,18 +13,23 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.app_banhangtructuyen.R;
 import com.example.app_banhangtructuyen.fragment.FragmentCart;
+import com.example.app_banhangtructuyen.model.Product;
 
 import java.lang.reflect.Field;
 import java.text.DecimalFormat;
 
 public class DetailActivity extends AppCompatActivity {
     AppCompatButton btncong,btntru;
-    TextView soluong,dongia;
+    TextView soluong,dongia, tensanpham, motasanpham;
     Integer so,gia,tong;
+    ImageView hinhsp;
+
     private AlertDialog alertDialog;
 
     @Override
@@ -32,6 +37,14 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         AnhXa();
+        Intent intent = getIntent();
+        Product product =(Product)intent.getSerializableExtra("selectProduct");
+
+        Glide.with(this).load(product.getHinhanh()).into(hinhsp);
+        tensanpham.setText(product.getTenSP());
+        motasanpham.setText(product.getMota());
+        dongia.setText(String.valueOf(product.getDongia()));
+
         ActionCongTruSoLuong();
         ActionAddCart();
 
@@ -74,7 +87,7 @@ public class DetailActivity extends AppCompatActivity {
 
                 so = getValue(soluong);
                 soluong.setText(String.valueOf(so+1));
-                dongia.setText(String.valueOf((so+1) * gia)+ " Đ");
+                dongia.setText(String.valueOf((so+1) * gia)+ " đ");
 
             }
         });
@@ -84,7 +97,7 @@ public class DetailActivity extends AppCompatActivity {
                 so = getValue(soluong) ;
                 if (so != 1){
                     soluong.setText(String.valueOf(so-1));
-                    dongia.setText(String.valueOf((so-1) * gia) + " Đ");
+                    dongia.setText(String.valueOf((so-1) * gia) + " đ");
                 }else
                     soluong.setText(String.valueOf(so));
 
@@ -104,7 +117,12 @@ public class DetailActivity extends AppCompatActivity {
         btncong = (AppCompatButton) findViewById(R.id.btncong);
         btntru = (AppCompatButton) findViewById(R.id.btntru);
         soluong = (TextView) findViewById(R.id.soluong);
-        dongia = (TextView) findViewById(R.id.dongia);
+        dongia = (TextView) findViewById(R.id.txtdongia);
+        tensanpham = (TextView) findViewById(R.id.tensp);
+        hinhsp = (ImageView) findViewById(R.id.imghinhsp);
+        motasanpham = (TextView) findViewById(R.id.txtmota);
+
+
     }
 
 }

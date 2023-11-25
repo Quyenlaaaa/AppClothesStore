@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.app_banhangtructuyen.R;
 import com.example.app_banhangtructuyen.model.Product;
 
@@ -34,14 +35,14 @@ public class SanphamAdapter extends ArrayAdapter<Product> {
 
         // Thiết lập dữ liệu sản phẩm lên view
         TextView productName = convertView.findViewById(R.id.txttensp);
-        productName.setText(product.getTensanpham());
+        productName.setText(product.getTenSP());
 
         ImageView productImage = convertView.findViewById(R.id.imgsp);
-        productImage.setImageResource(product.getHinhanh());
+        Glide.with(getContext()).load(product.getHinhanh()).into(productImage);
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
 
         TextView productPrice = convertView.findViewById(R.id.txtgiasp);
-        productPrice.setText(decimalFormat.format(product.getDongia())+" $");
+        productPrice.setText(decimalFormat.format(product.getDongia())+" đ");
 
         return convertView;
     }

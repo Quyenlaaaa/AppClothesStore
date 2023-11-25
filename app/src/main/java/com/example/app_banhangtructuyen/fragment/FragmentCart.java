@@ -83,10 +83,10 @@ public class FragmentCart extends Fragment {
         GridView gridView = (GridView) view.findViewById(R.id.grvgiohang);
         ArrayList arrayList = new ArrayList<>();
 
-        arrayList.add(new Product(1,"Áo khoác nam",150000,R.drawable.sanpham," ",1));
-        arrayList.add(new Product(2,"Áo khoác nam",150000,R.drawable.sanpham," ",2));
-        arrayList.add(new Product(3,"Áo khoác nam",150000,R.drawable.sanpham," ",3));
-        arrayList.add(new Product(4,"Áo khoác nam",150000,R.drawable.sanpham," ",4));
+//        arrayList.add(new Product(1,"Áo khoác nam",150000,R.drawable.sanpham," ",1));
+//        arrayList.add(new Product(2,"Áo khoác nam",150000,R.drawable.sanpham," ",2));
+//        arrayList.add(new Product(3,"Áo khoác nam",150000,R.drawable.sanpham," ",3));
+//        arrayList.add(new Product(4,"Áo khoác nam",150000,R.drawable.sanpham," ",4));
         GiohangAdapter adapter = new GiohangAdapter(getActivity(),arrayList);
         gridView.setAdapter(adapter);
 

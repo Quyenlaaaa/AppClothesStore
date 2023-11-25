@@ -34,6 +34,7 @@ public class SignInActivity extends AppCompatActivity {
         btsignin = findViewById(R.id.appCompatButton);
         txtsignup = findViewById(R.id.txtsignup);
 
+
         btsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -42,10 +42,10 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
         ListView gridView = (ListView) findViewById(R.id.lvquanao);
         ArrayList arrayList = new ArrayList<>();
 
-        arrayList.add(new Product(1,"Áo khoác nam",150000,R.drawable.sanpham," ",1));
-        arrayList.add(new Product(2,"Áo khoác nam",150000,R.drawable.sanpham," ",2));
-        arrayList.add(new Product(3,"Áo khoác nam",150000,R.drawable.sanpham," ",3));
-        arrayList.add(new Product(3,"Áo khoác nam",150000,R.drawable.sanpham," ",4));
+//        arrayList.add(new Product(1,"Áo khoác nam",150000,R.drawable.sanpham," ",1));
+//        arrayList.add(new Product(2,"Áo khoác nam",150000,R.drawable.sanpham," ",2));
+//        arrayList.add(new Product(3,"Áo khoác nam",150000,R.drawable.sanpham," ",3));
+//        arrayList.add(new Product(3,"Áo khoác nam",150000,R.drawable.sanpham," ",4));
         SanPhamInDatHangAdapter adapter = new SanPhamInDatHangAdapter(this,arrayList);
         gridView.setAdapter(adapter);
     }

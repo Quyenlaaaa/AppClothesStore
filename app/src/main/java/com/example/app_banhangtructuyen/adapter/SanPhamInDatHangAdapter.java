@@ -32,9 +32,9 @@ public class SanPhamInDatHangAdapter extends ArrayAdapter<Product> {
         TextView txtgiasp = view.findViewById(R.id.giasanpham);
         Product itemCart = getItem(position);
 
-        anhsp.setImageResource(itemCart.getHinhanh());
+        //anhsp.setImageResource(itemCart.getHinhanh());
         txtsl.setText("1");
-        txttensp.setText(itemCart.getTensanpham());
+        txttensp.setText(itemCart.getTenSP());
 
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         txtgiasp.setText(decimalFormat.format(itemCart.getDongia()));

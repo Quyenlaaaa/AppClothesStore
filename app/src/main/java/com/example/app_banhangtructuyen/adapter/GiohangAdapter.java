@@ -35,10 +35,10 @@ public class GiohangAdapter extends ArrayAdapter<Product> {
 
         // Thiết lập dữ liệu sản phẩm lên view
         TextView productName = view.findViewById(R.id.tensp);
-        productName.setText(product.getTensanpham());
+        productName.setText(product.getTenSP());
 
         ImageView productImage = view.findViewById(R.id.hinhsp);
-        productImage.setImageResource(product.getHinhanh());
+        //productImage.setImageResource(product.getHinhanh());
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
 
         TextView productPrice = view.findViewById(R.id.giasp);

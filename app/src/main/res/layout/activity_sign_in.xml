@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="100pt"
-        android:layout_height="100pt"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/imglogo"
@@ -25,7 +25,7 @@
             android:id="@+id/txtuser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tên tài khoản"
+            android:text="Email"
             android:textColor="#121312"
             android:textSize="18sp"
             />
