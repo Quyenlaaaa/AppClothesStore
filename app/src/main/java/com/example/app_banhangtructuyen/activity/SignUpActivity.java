@@ -90,6 +90,7 @@ public class SignUpActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     firestore = FirebaseDatabase.getInstance();
                     reference = firestore.getReference("Khachhang");
+                    //Tạo chuỗi tự động làm id
                     DatabaseReference newRef = reference.push();
                     KhachhangClass kh = new KhachhangClass(hoTen, phone_email, password, diaChi);
                     newRef.setValue(kh);
