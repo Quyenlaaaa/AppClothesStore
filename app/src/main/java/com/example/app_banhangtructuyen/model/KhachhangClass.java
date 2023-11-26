@@ -1,7 +1,10 @@
 package com.example.app_banhangtructuyen.model;
 
 public class KhachhangClass {
-    String hoTen, phone_email, password, diaChi;
+    private String hoTen;
+    private String phone_email;
+    private String password;
+    private String diaChi;
 
     public KhachhangClass() {
     }

@@ -67,11 +67,6 @@ public class SignUpActivity extends AppCompatActivity {
         String phone_email = editPhoneorEmail.getEditText().getText().toString().trim();
         String password = editPassword.getEditText().getText().toString().trim();
         String nhapLaiPass = editNhapLaiPass.getEditText().getText().toString().trim();
-        firestore = FirebaseDatabase.getInstance();
-        reference = firestore.getReference("Khachhang");
-
-        KhachhangClass Class = new KhachhangClass(hoTen, phone_email, password, diaChi);
-        reference.setValue(Class);
 
         if (TextUtils.isEmpty(hoTen) || TextUtils.isEmpty(diaChi)
                 || TextUtils.isEmpty(phone_email) || TextUtils.isEmpty(password)
@@ -93,6 +88,11 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
+                    firestore = FirebaseDatabase.getInstance();
+                    reference = firestore.getReference("Khachhang");
+                    DatabaseReference newRef = reference.push();
+                    KhachhangClass kh = new KhachhangClass(hoTen, phone_email, password, diaChi);
+                    newRef.setValue(kh);
                     Toast.makeText(SignUpActivity.this, "Đăng ký thành công!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(SignUpActivity.this, SignInActivity.class));
                     finish();
