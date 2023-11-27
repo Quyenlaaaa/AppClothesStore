@@ -15,11 +15,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.app_banhangtructuyen.R;
 import com.example.app_banhangtructuyen.fragment.FragmentCart;
+import com.example.app_banhangtructuyen.model.ItemCart;
 import com.example.app_banhangtructuyen.model.Product;
+import com.example.app_banhangtructuyen.model.ShoppingCart;
+import com.example.app_banhangtructuyen.model.ShoppingCartSingleton;
 
 import java.lang.reflect.Field;
 import java.text.DecimalFormat;
@@ -29,6 +33,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView soluong,dongia, tensanpham, motasanpham;
     Integer so,gia,tong;
     ImageView hinhsp;
+    Product product;
 
     private AlertDialog alertDialog;
 
@@ -38,7 +43,7 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         AnhXa();
         Intent intent = getIntent();
-        Product product =(Product)intent.getSerializableExtra("selectProduct");
+        product =(Product)intent.getSerializableExtra("selectProduct");
 
         Glide.with(this).load(product.getHinhanh()).into(hinhsp);
         tensanpham.setText(product.getTenSP());
@@ -55,8 +60,16 @@ public class DetailActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ShoppingCart shoppingCart = ShoppingCartSingleton.getInstance().getShoppingCart();
+                for (ItemCart item : shoppingCart.getCartItems()){
+                    if(item.getProduct().getMaSP() == product.getMaSP()){
+                        shoppingCart.addItem(product,Integer.parseInt(soluong.getText().toString()));
+                        Toast.makeText(DetailActivity.this,"Sản phẩm đã có trong giỏ hàng +"+ soluong.getText().toString(), Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                }
+                shoppingCart.addItem(product,Integer.parseInt(soluong.getText().toString()));
                 AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
-
                 // Gắn layout cho dialog
                 View dialogView = getLayoutInflater().inflate(R.layout.showdialog_addgiohang, null);
                 builder.setView(dialogView);

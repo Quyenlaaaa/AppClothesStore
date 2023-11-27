@@ -13,17 +13,22 @@ import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatButton;
 
+import com.bumptech.glide.Glide;
 import com.example.app_banhangtructuyen.R;
+import com.example.app_banhangtructuyen.model.ItemCart;
 import com.example.app_banhangtructuyen.model.Product;
+import com.example.app_banhangtructuyen.model.ShoppingCart;
+import com.example.app_banhangtructuyen.model.ShoppingCartSingleton;
 
 import java.text.DecimalFormat;
 import java.util.List;
 
-public class GiohangAdapter extends ArrayAdapter<Product> {
+public class GiohangAdapter extends ArrayAdapter<ItemCart> {
     Integer so;
-    public GiohangAdapter(Context context, List<Product> products) {
+    ItemCart itemCart;
+    public GiohangAdapter(Context context, List<ItemCart> itemCarts) {
 
-        super(context,0, products);
+        super(context,0, itemCarts);
     }
     @Override
     public View getView(int i, View view, ViewGroup parent) {
@@ -31,42 +36,47 @@ public class GiohangAdapter extends ArrayAdapter<Product> {
             view = LayoutInflater.from(getContext()).inflate(R.layout.listitemin_giohang, parent, false);
         }
         //ánh xạ view
-        Product product = (Product) getItem(i);
+        itemCart = (ItemCart) getItem(i);
 
         // Thiết lập dữ liệu sản phẩm lên view
         TextView productName = view.findViewById(R.id.tensp);
-        productName.setText(product.getTenSP());
+        productName.setText(itemCart.getProduct().getTenSP());
 
         ImageView productImage = view.findViewById(R.id.hinhsp);
-        //productImage.setImageResource(product.getHinhanh());
+        Glide.with(getContext()).load(itemCart.getProduct().getHinhanh()).into(productImage);
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
 
         TextView productPrice = view.findViewById(R.id.giasp);
-        productPrice.setText(decimalFormat.format(product.getDongia())+" $");
-
-        SetSoLuong(view);
+        productPrice.setText(decimalFormat.format(itemCart.getProduct().getDongia())+" đ");
+        TextView soluong = view.findViewById(R.id.soluong);
+        soluong.setText(String.valueOf(itemCart.getQuantity()));
+        SetSoLuong(view,itemCart);
 
         return view;
     }
-    public void  SetSoLuong( View view){
+    public void  SetSoLuong( View view, ItemCart cart){
         AppCompatButton btntru= view.findViewById(R.id.btntru);
         AppCompatButton btncong= view.findViewById(R.id.btncong);
         TextView soluong = view.findViewById(R.id.soluong);
         btncong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                so = getValue(soluong);
-                soluong.setText(String.valueOf(so+1));
+                int newQuantity = cart.getQuantity() + 1;
+                cart.setQuantity(newQuantity);
+                notifyDataSetChanged();
             }
         });
         btntru.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                so = getValue(soluong);
-                if (so != 1){
-                    soluong.setText(String.valueOf(so-1));
-                }else
-                    soluong.setText(String.valueOf(so));
+                int newQuantity = cart.getQuantity() - 1;
+                if (newQuantity > 0) {
+                    cart.setQuantity(newQuantity);
+                    notifyDataSetChanged();
+                }else {
+                    remove(cart);
+                    notifyDataSetChanged();
+                }
             }
         });
     }

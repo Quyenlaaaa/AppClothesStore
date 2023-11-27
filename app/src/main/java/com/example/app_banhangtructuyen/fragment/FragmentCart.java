@@ -10,15 +10,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.app_banhangtructuyen.R;
 import com.example.app_banhangtructuyen.activity.XacNhanDonHangActivity;
 import com.example.app_banhangtructuyen.adapter.GiohangAdapter;
-import com.example.app_banhangtructuyen.model.Product;
+import com.example.app_banhangtructuyen.model.ItemCart;
+import com.example.app_banhangtructuyen.model.ShoppingCart;
+import com.example.app_banhangtructuyen.model.ShoppingCartSingleton;
 
-import java.util.ArrayList;
+import java.text.DecimalFormat;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,31 +28,17 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class FragmentCart extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
     View view;
-    Integer so;
+    double tongtien;
+    ShoppingCart shoppingCart;
 
     public FragmentCart() {
         // Required empty public constructor
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentCart.
-     */
-    // TODO: Rename and change types and number of parameters
     public static FragmentCart newInstance(String param1, String param2) {
         FragmentCart fragment = new FragmentCart();
         Bundle args = new Bundle();
@@ -74,21 +62,21 @@ public class FragmentCart extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view =  inflater.inflate(R.layout.fragment_cart, container, false);
+        shoppingCart = ShoppingCartSingleton.getInstance().getShoppingCart();
         ShowlistSanPhamGioHang();
+        tongtien = shoppingCart.getCountItemCart();
+        TextView txttongtien = view.findViewById(R.id.tonggiatien);
+        DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
+        txttongtien.setText(decimalFormat.format(tongtien)+" đ");
         return view;
     }
 
     private void ShowlistSanPhamGioHang() {
-
         GridView gridView = (GridView) view.findViewById(R.id.grvgiohang);
-        ArrayList arrayList = new ArrayList<>();
-
-//        arrayList.add(new Product(1,"Áo khoác nam",150000,R.drawable.sanpham," ",1));
-//        arrayList.add(new Product(2,"Áo khoác nam",150000,R.drawable.sanpham," ",2));
-//        arrayList.add(new Product(3,"Áo khoác nam",150000,R.drawable.sanpham," ",3));
-//        arrayList.add(new Product(4,"Áo khoác nam",150000,R.drawable.sanpham," ",4));
+        List<ItemCart> arrayList = shoppingCart.getCartItems();
         GiohangAdapter adapter = new GiohangAdapter(getActivity(),arrayList);
         gridView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
 
         AppCompatButton btn = view.findViewById(R.id.muangay);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -99,6 +87,5 @@ public class FragmentCart extends Fragment {
             }
         });
     }
-
 
 }
