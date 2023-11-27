@@ -64,6 +64,7 @@ public class FragmentCart extends Fragment {
         view =  inflater.inflate(R.layout.fragment_cart, container, false);
         shoppingCart = ShoppingCartSingleton.getInstance().getShoppingCart();
         ShowlistSanPhamGioHang();
+
         tongtien = shoppingCart.getCountItemCart();
         TextView txttongtien = view.findViewById(R.id.tonggiatien);
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");

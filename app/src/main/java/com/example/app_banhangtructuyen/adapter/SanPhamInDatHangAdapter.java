@@ -11,33 +11,40 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
+import com.bumptech.glide.Glide;
 import com.example.app_banhangtructuyen.R;
 import com.example.app_banhangtructuyen.model.ItemCart;
 import com.example.app_banhangtructuyen.model.Product;
+import com.example.app_banhangtructuyen.model.ShoppingCart;
 
 import java.text.DecimalFormat;
 import java.util.List;
 
-public class SanPhamInDatHangAdapter extends ArrayAdapter<Product> {
-    public SanPhamInDatHangAdapter(Context context, List<Product> itemCarts) {
+public class SanPhamInDatHangAdapter extends ArrayAdapter<ItemCart> {
 
+    ItemCart itemCart;
+    public SanPhamInDatHangAdapter(Context context, List<ItemCart> itemCarts) {
         super(context,0, itemCarts);
     }
     @Override
-    public View getView(int position, View view, ViewGroup parent) {
-        view = LayoutInflater.from(getContext()).inflate(R.layout.cardquanao, parent, false);
+    public View getView(int i, View view, ViewGroup parent) {
+        if (view == null) {
+            view = LayoutInflater.from(getContext()).inflate(R.layout.cardquanao, parent, false);
+        }
+        itemCart = (ItemCart) getItem(i);
         ImageView anhsp = view.findViewById(R.id.imgao);
+        Glide.with(getContext()).load(itemCart.getProduct().getHinhanh()).into(anhsp);
         TextView txtsl = view.findViewById(R.id.soluong);
+        txtsl.setText(String.valueOf(itemCart.getQuantity()));
         TextView txttensp = view.findViewById(R.id.tensanpham);
+        txttensp.setText(itemCart.getProduct().getTenSP());
         TextView txtgiasp = view.findViewById(R.id.giasanpham);
-        Product itemCart = getItem(position);
+
 
         //anhsp.setImageResource(itemCart.getHinhanh());
-        txtsl.setText("1");
-        txttensp.setText(itemCart.getTenSP());
 
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
-        txtgiasp.setText(decimalFormat.format(itemCart.getDongia()));
+        txtgiasp.setText(decimalFormat.format(itemCart.getProduct().getDongia())+" đ");
 
         return view;
 

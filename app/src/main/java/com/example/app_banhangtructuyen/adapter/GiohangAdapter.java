@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,6 +26,8 @@ import java.util.List;
 
 public class GiohangAdapter extends ArrayAdapter<ItemCart> {
     Integer so;
+    ShoppingCart shoppingCart;
+    List<ItemCart> item;
     ItemCart itemCart;
     public GiohangAdapter(Context context, List<ItemCart> itemCarts) {
 
@@ -51,7 +54,25 @@ public class GiohangAdapter extends ArrayAdapter<ItemCart> {
         TextView soluong = view.findViewById(R.id.soluong);
         soluong.setText(String.valueOf(itemCart.getQuantity()));
         SetSoLuong(view,itemCart);
+        shoppingCart = ShoppingCartSingleton.getInstance().getShoppingCart();
+        item = shoppingCart.getCartItems();
+        CheckBox checkBox = view.findViewById(R.id.ck);
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    for (int i = 0; i < item.size(); i++) {
+                        if (item.get(i).getProduct().getMaSP() == itemCart.getProduct().getMaSP()) {
+                            item.remove(i);
+                        }
+                    }
 
+                }
+                else {
+                    item.add(itemCart);
+                }
+            }
+        });
         return view;
     }
     public void  SetSoLuong( View view, ItemCart cart){
