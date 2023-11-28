@@ -43,26 +43,23 @@
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:layout_marginStart="10dp"
-                android:background="@drawable/shapetimkiem"
                 tools:ignore="ExtraText">
 
-                <EditText
-                    android:id="@+id/txtsearch"
-                    android:layout_width="230dp"
+                <AutoCompleteTextView
+                    android:id="@+id/atc_product_search"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:background="#DFEADFDF"
-                    android:fontFamily="@font/montserrat_extralight"
-                    android:hint="Tìm kiếm"
-                    android:textColorHint="@color/black"
-                    tools:ignore="TouchTargetSizeCheck" />                   />
-                <ImageView
-                    android:id="@+id/iconsearch"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/iconsearch"/>
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/circle_indicator"
+                    android:background="@drawable/custom_edit_text_search"
+                    android:padding="5dp"
+                    android:completionThreshold="1"
+                    android:hint="Bạn tìm gì"
+                    android:drawableRight="@drawable/ic_baseline_search_24"
+                    android:textSize="15sp"></AutoCompleteTextView>
+
+
             </LinearLayout>
 
         </LinearLayout>

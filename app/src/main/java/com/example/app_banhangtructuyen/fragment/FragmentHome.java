@@ -5,31 +5,24 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
+import android.widget.AutoCompleteTextView;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.example.app_banhangtructuyen.R;
 import com.example.app_banhangtructuyen.activity.DetailActivity;
-import com.example.app_banhangtructuyen.activity.TimKiemActivity;
+import com.example.app_banhangtructuyen.adapter.ProductSearchAdapter;
 import com.example.app_banhangtructuyen.adapter.SanphamAdapter;
 import com.example.app_banhangtructuyen.model.Category;
 import com.example.app_banhangtructuyen.model.Product;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -57,6 +50,9 @@ public class FragmentHome extends Fragment {
     private String mParam2;
 
     private View view;
+
+
+    private AutoCompleteTextView atcProductSearch;
     List<Product> arrayList;
     ArrayList<Category> categorylist;
     SanphamAdapter adapter;
@@ -87,19 +83,16 @@ public class FragmentHome extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         view= inflater.inflate(R.layout.fragment_home, container, false);
         ActionViewFlipper();
         ActionCategory();
         ShowSanPham(1);
-//        ActionTimKiem();
         ClickItemSanPham();
-
+        atcProductSearch = view.findViewById(R.id.atc_product_search);
 
         return view;
-
-
     }
+
     public void ActionViewFlipper(){
         ViewFlipper viewFlipper = (ViewFlipper) view.findViewById(R.id.viewflipper);
         int[] arrayBanner = {R.drawable.banner3,R.drawable.banner2, R.drawable.banner4};
@@ -171,16 +164,22 @@ public class FragmentHome extends Fragment {
 
     }
 
-    public void ActionTimKiem(){
-        ImageView iconsearch = view.findViewById(R.id.iconsearch);
-        iconsearch.setOnClickListener(new View.OnClickListener() {
+    public void setProductSearchAdapter(List<Product> arrayList ){
+        ProductSearchAdapter productSearchAdapter = new ProductSearchAdapter(getActivity(),R.layout.item_search, arrayList);
+        atcProductSearch.setAdapter(productSearchAdapter);
+        atcProductSearch.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), TimKiemActivity.class);
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Product selectProduct = arrayList.get(i);
+                Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra("selectProduct", selectProduct);
+                //Toast.makeText(getContext(), selectProduct.getTenSP(), Toast.LENGTH_SHORT).show();
                 startActivity(intent);
+
             }
         });
     }
+
     public  void ShowSanPham(int madm){
         arrayList = new ArrayList<>();
         GridView recyclerView = (GridView) view.findViewById(R.id.listsanpham);
@@ -201,6 +200,7 @@ public class FragmentHome extends Fragment {
                     //Toast.makeText(getContext(), sp.getTenSP(), Toast.LENGTH_SHORT).show();
                 }
                 adapter.notifyDataSetChanged();
+                setProductSearchAdapter(arrayList);
             }
 
             @Override
@@ -225,5 +225,8 @@ public class FragmentHome extends Fragment {
             }
         });
     }
+
+
+
 
 }

@@ -13,12 +13,19 @@ import com.example.app_banhangtructuyen.fragment.FragmentCart;
 import com.example.app_banhangtructuyen.fragment.FragmentHome;
 import com.example.app_banhangtructuyen.fragment.FragmentThongBao;
 import com.example.app_banhangtructuyen.fragment.FragmentUser;
+import com.example.app_banhangtructuyen.model.Product;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
     BottomNavigationView bottomnav;
+    private List<Product> listCartProduct;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,5 +65,13 @@ public class HomeActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_container, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+    public void addToListCartProdct(Product product){
+        listCartProduct.add(product);
+    }
+
+    // Lấy ra các sản phẩm đã thêm vào giỏ hàng
+    public List<Product> getListCartProduct() {
+        return listCartProduct;
     }
 }

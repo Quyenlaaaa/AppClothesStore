@@ -12,6 +12,7 @@ public class Product implements Serializable {
     private String Mota;
     private int Soluong;
 
+
     public Product(){}
     public Product(int maSP, String tenSP, int dongia, String hinhanh, int maDM, String mota, int soluong) {
         MaSP = maSP;
