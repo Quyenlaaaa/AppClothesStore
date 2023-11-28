@@ -3,6 +3,8 @@ package com.example.app_banhangtructuyen.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.app_banhangtructuyen.R;
 import com.example.app_banhangtructuyen.activity.XacNhanDonHangActivity;
@@ -18,6 +21,9 @@ import com.example.app_banhangtructuyen.adapter.GiohangAdapter;
 import com.example.app_banhangtructuyen.model.ItemCart;
 import com.example.app_banhangtructuyen.model.ShoppingCart;
 import com.example.app_banhangtructuyen.model.ShoppingCartSingleton;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -35,6 +41,7 @@ public class FragmentCart extends Fragment {
     View view;
     double tongtien;
     ShoppingCart shoppingCart;
+
 
     public FragmentCart() {
         // Required empty public constructor
@@ -85,6 +92,14 @@ public class FragmentCart extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), XacNhanDonHangActivity.class);
                 startActivity(intent);
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("Cart");
+                myRef.setValue(arrayList, new DatabaseReference.CompletionListener() {
+                    @Override
+                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                        Toast.makeText(getActivity(), "Push data success", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
     }
