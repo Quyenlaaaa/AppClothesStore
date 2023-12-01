@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:text="I.Định nghĩa và diễn giải"
-    android:textSize="20dp"
-    android:padding="10dp"
-    android:textColor="#0C583B"
-    android:layout_height="wrap_content">
-</CheckedTextView>

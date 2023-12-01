@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">App_Banhangtructuyen</string>
+    <string name="action_home">Home</string>
+    <string name="action_cart">Giỏ hàng</string>
+    <string name="action_thongbao">Thông báo</string>
+    <string name="action_user">Hồ sơ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="list">
+        <item>I. Đoàn Nguyễn Thành Giang</item>
+        <item>MSV: 21115053120114</item>
+    </string-array>
+    <string-array name="list2">
+        <item>II. Huỳnh Văn Tiến</item>
+        <item>MSV: 21115053120152</item>
+    </string-array>
+    <string-array name="list3">
+        <item>III.  Huỳnh Trọng Hiếu</item>
+        <item>MSV: 21115053120117</item>
+    </string-array>
+    <string-array name="list4">
+        <item>IV. Hoàng Kim Tuấn Anh</item>
+        <item>MSV: 21115053120102</item>
+    </string-array>
+    <string-array name="list5">
+        <item>V. La Thế Quyền</item>
+        <item>MSV: 21115053120138</item>
+    </string-array>
+    <string-array name="spin">
+        <item>Tiền mặt</item>
+        <item>Momo</item>
+        <item>Zalopay</item>
+    </string-array>
+
+
+    <string-array name="dadat3">
+        <item>Trang thai</item>
+        <item>Chua mua</item>
+        <item>Da mua</item>
+    </string-array>
+
+    <string-array name="dadat4">
+        <item>29/2/2003</item>
+        <item>30/6/2976</item>
+    </string-array>
+    <string name="title_activity_huy">Huy</string>
+    <string name="title_activity_admin">Admin_Activity</string>
+</resources>
