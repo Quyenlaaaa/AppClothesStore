@@ -34,6 +34,13 @@ public class ShoppingCart implements Serializable {
         }
         return tongtien;
     }
+    public double getCountItemCart2(){
+        double tongtien=15000;
+        for (ItemCart item : cartItems){
+            tongtien += item.getQuantity() * item.getProduct().getDongia();
+        }
+        return tongtien;
+    }
 
     public List<ItemCart> getCartItems() {
         return cartItems;

@@ -23,7 +23,9 @@ import com.example.app_banhangtructuyen.activity.CaiDatActivity;
 import com.example.app_banhangtructuyen.activity.DieuKhoanActivity;
 import com.example.app_banhangtructuyen.activity.DonHangCuaToiActivity;
 import com.example.app_banhangtructuyen.activity.HoTroActivity;
+import com.example.app_banhangtructuyen.activity.HomeActivity;
 import com.example.app_banhangtructuyen.activity.HosoActivity;
+import com.example.app_banhangtructuyen.activity.SignInActivity;
 import com.example.app_banhangtructuyen.adapter.ListItemUserAdapter;
 
 /**
@@ -75,6 +77,7 @@ public class FragmentUser extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_user, container, false);
         ShowItemInUser();
+
 
         return view;
     }
@@ -150,7 +153,9 @@ public class FragmentUser extends Fragment {
         btyes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialog.dismiss();
+
+                Intent intent = new Intent(getActivity(), SignInActivity.class);
+                startActivity(intent);
             }
         });
         dialog.show();

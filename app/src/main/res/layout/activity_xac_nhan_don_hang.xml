@@ -143,6 +143,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="20dp"/>
                 <TextView
+                    android:id="@+id/tongcong"
                     android:layout_alignParentRight="true"
                     android:text="270.000đ"
                     android:layout_marginRight="20dp"
@@ -194,6 +195,7 @@
                     android:textSize="16dp"/>
 
                 <TextView
+                    android:id="@+id/tongcong2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
