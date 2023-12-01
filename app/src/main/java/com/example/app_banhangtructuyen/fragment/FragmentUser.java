@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.Gravity;
@@ -17,6 +18,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.app_banhangtructuyen.R;
 import com.example.app_banhangtructuyen.activity.CaiDatActivity;
@@ -24,7 +26,14 @@ import com.example.app_banhangtructuyen.activity.DieuKhoanActivity;
 import com.example.app_banhangtructuyen.activity.DonHangCuaToiActivity;
 import com.example.app_banhangtructuyen.activity.HoTroActivity;
 import com.example.app_banhangtructuyen.activity.HosoActivity;
+import com.example.app_banhangtructuyen.adapter.HosoAdapter;
 import com.example.app_banhangtructuyen.adapter.ListItemUserAdapter;
+import com.example.app_banhangtructuyen.model.UserSingleton;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -42,6 +51,7 @@ public class FragmentUser extends Fragment {
     private String mParam1;
     private String mParam2;
     View view;
+    TextView hovaten;
     ListView simpleList;
     String List[] = {"Hồ sơ","Đơn hàng của tôi", "Cài Đặt", "Hỗ trợ", "Về chúng tôi", "Đăng xuất"};
     int flags[] = {R.drawable.group,R.drawable.iconcart, R.drawable.gear, R.drawable.headphones, R.drawable.warningoctagon, R.drawable.signout};
@@ -80,6 +90,31 @@ public class FragmentUser extends Fragment {
     }
 
     public void ShowItemInUser() {
+        hovaten=(TextView)view.findViewById(R.id.hovaten);
+        UserSingleton userSingleton = UserSingleton.getInstance();
+        String email = userSingleton.getUsername();
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = firebaseDatabase.getReference("Khachhang");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot snap:snapshot.getChildren()) {
+                    String emaila = snap.child("phone_email").getValue(String.class);
+                    if( email.equals(emaila)==true)
+                    {
+                        String hoten = snap.child("hoTen").getValue(String.class);
+                        hovaten.setText(hoten);
+
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         simpleList = (ListView) view.findViewById(R.id.list);
         ListItemUserAdapter adapter = new ListItemUserAdapter(getActivity(), List, flags);
         simpleList.setAdapter(adapter);

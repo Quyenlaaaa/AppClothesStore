@@ -61,7 +61,7 @@
             android:name=".activity.CaiDatActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.SignInActivity"
+            android:name=".activity.QuanlySP_Activity"
             android:exported="false" />
         <activity
             android:name=".activity.DetailActivity"
@@ -76,7 +76,7 @@
             android:name=".activity.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.QuanlySP_Activity"
+            android:name=".activity.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
