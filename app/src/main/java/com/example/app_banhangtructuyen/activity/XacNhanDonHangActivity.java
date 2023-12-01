@@ -18,6 +18,7 @@ import com.example.app_banhangtructuyen.adapter.SanphamAdapter;
 import com.example.app_banhangtructuyen.model.ItemCart;
 import com.example.app_banhangtructuyen.model.Product;
 import com.example.app_banhangtructuyen.model.ShoppingCart;
+import com.example.app_banhangtructuyen.model.ShoppingCartSingleton;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class XacNhanDonHangActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xac_nhan_don_hang);
+        shoppingCart = ShoppingCartSingleton.getInstance().getShoppingCart();
         ShowListSPDM();
         tongtien = shoppingCart.getCountItemCart();
         tongtien2 = shoppingCart.getCountItemCart2();
