@@ -29,6 +29,9 @@
             android:name=".activity.SuaDiaChiNhanHangActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.Admin_Activity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ChiTietDonHangActivity"
             android:exported="false" />
         <activity
@@ -42,6 +45,12 @@
             android:exported="false" />
         <activity
             android:name=".activity.DieuKhoanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.QuanlySP_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Themmoisp_Activity"
             android:exported="false" />
         <activity
             android:name=".activity.HoTroActivity"

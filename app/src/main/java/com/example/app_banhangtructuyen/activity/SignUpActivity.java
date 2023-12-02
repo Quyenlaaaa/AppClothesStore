@@ -92,7 +92,7 @@ public class SignUpActivity extends AppCompatActivity {
                     reference = firestore.getReference("Khachhang");
                     //Tạo chuỗi tự động làm id
                     DatabaseReference newRef = reference.push();
-                    Khachhang kh = new Khachhang(hoTen, phone_email, password, diaChi);
+                    Khachhang kh = new Khachhang(hoTen, phone_email, password, diaChi,"","");
                     newRef.setValue(kh);
                     Toast.makeText(SignUpActivity.this, "Đăng ký thành công!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(SignUpActivity.this, SignInActivity.class));

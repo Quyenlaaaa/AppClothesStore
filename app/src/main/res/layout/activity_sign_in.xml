@@ -155,7 +155,7 @@
     </LinearLayout>
 
     <TextView
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="15dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:id="@+id/txtsignup"

@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.app_banhangtructuyen.R;
+import com.example.app_banhangtructuyen.model.UserSingleton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -54,7 +55,8 @@ public class SignInActivity extends AppCompatActivity {
         String email_phone,pass;
         email_phone=editemailPhone.getText().toString();
         pass=editPassword.getText().toString();
-
+        UserSingleton userSingleton = UserSingleton.getInstance();
+        userSingleton.setUsername(email_phone);
         if(TextUtils.isEmpty(email_phone) || TextUtils.isEmpty(pass)){
             Toast.makeText(this, "Eamil/Số điện thoại hoặc mật khẩu trống!", Toast.LENGTH_SHORT).show();
             return;

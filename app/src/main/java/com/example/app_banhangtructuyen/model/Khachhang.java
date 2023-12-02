@@ -5,15 +5,19 @@ public class Khachhang{
     private String phone_email;
     private String password;
     private String diaChi;
+    private  String gioitinh;
+    private  String sodt;
 
     public Khachhang() {
     }
 
-    public Khachhang(String hoTen, String phone_email, String password, String diaChi) {
+    public Khachhang(String hoTen, String phone_email, String password, String diaChi,String gioitinh,String sdt) {
         this.hoTen = hoTen;
         this.phone_email = phone_email;
         this.password = password;
         this.diaChi = diaChi;
+        this.gioitinh=gioitinh;
+        this.sodt=sdt;
     }
 
     public String getHoTen() {
@@ -46,5 +50,21 @@ public class Khachhang{
 
     public void setDiaChi(String diaChi) {
         this.diaChi = diaChi;
+    }
+
+    public String getGioitinh() {
+        return gioitinh;
+    }
+
+    public void setGioitinh(String gioitinh) {
+        this.gioitinh = gioitinh;
+    }
+
+    public String getSodt() {
+        return sodt;
+    }
+
+    public void setSodt(String sodt) {
+        this.sodt = sodt;
     }
 }

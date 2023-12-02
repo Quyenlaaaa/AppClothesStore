@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,87 +18,98 @@
         android:textStyle="bold" />
 
     <GridView
+        android:layout_below="@+id/ghang"
+        android:layout_above="@id/duoi"
         android:id="@+id/grvgiohang"
         android:layout_width="match_parent"
-        android:layout_height="530dp"
-        android:layout_marginTop="65dp"/>
+        android:layout_height="match_parent"
+       />
 
-    <RelativeLayout
 
-        android:id="@+id/duoi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="600dp">
         <LinearLayout
+            android:id="@+id/duoi"
             android:background="#F4E7E7"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+          >
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:gravity="center"
-               >
-
-                <CheckBox
-                    android:id="@+id/checkbox"
-                    android:layout_width="30dp"
-                    android:layout_height="38dp"
-                    tools:ignore="TouchTargetSizeCheck">
-
-                </CheckBox>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Tất cả"
-                    android:textSize="15dp"
-                    tools:ignore="TextSizeCheck" />
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="50dp"
-                android:layout_gravity="center"
-                android:gravity="right">
-                <TextView
-                    android:id="@+id/tongthanhtoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tổng thanh toán"
-                    android:textSize="16sp" />
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    >
 
-                <TextView
-                    android:id="@+id/tonggiatien"
+                    <CheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="30dp"
+                        android:layout_height="38dp"
+                        tools:ignore="TouchTargetSizeCheck">
+
+                    </CheckBox>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tất cả"
+                        android:textSize="15dp"
+                        tools:ignore="TextSizeCheck" />
+
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tongthanhtoan"
-                    android:text="0d"
-                    android:textSize="16sp"/>
+                    android:orientation="horizontal"
+                    android:layout_marginStart="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="right">
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/tongthanhtoan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tổng tiền"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tonggiatien"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tongthanhtoan"
+                        android:text="0d"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/muangay"
+                    android:layout_width="119dp"
+                    android:layout_height="52dp"
+                    android:layout_marginRight="30dp"
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/muangay"
-                android:layout_width="119dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/button_dangnhap"
-                android:text="Mua hàng"
-                android:textColor="@color/white"
+                    android:background="@drawable/button_dangnhap"
+                    android:text="Mua hàng"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+            </RelativeLayout>
 
-                android:textSize="11sp" />
 
         </LinearLayout>
-    </RelativeLayout>
 
-</FrameLayout>
+
+</RelativeLayout>

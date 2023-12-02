@@ -2,9 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="70dp"
+    android:gravity="center"
     android:orientation="horizontal"
-    android:padding="10dp"
+    android:padding="5dp"
     android:layout_centerHorizontal="true">
 
     <CheckBox
@@ -13,8 +14,8 @@
         android:layout_gravity="center"/>
     <ImageView
         android:id="@+id/hinhsp"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:background="@drawable/setupimagesanpham"/>
     <LinearLayout
         android:id="@+id/textaa"
@@ -27,11 +28,12 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="Áo khoác nam Kaki Cao cấp"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textStyle="bold"/>
         <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center">
             <ImageView
                 android:layout_width="16dp"
@@ -47,7 +49,7 @@
 
     </LinearLayout>
     <LinearLayout
-        android:padding="5dp"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
@@ -57,18 +59,19 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btntru"
             android:layout_width="20dp"
+
             android:layout_height="20dp"
             android:background="@drawable/icontru"
             android:text=" "
-            tools:ignore="TouchTargetSizeCheck"
-            android:contentDescription="Mô tả cho nút"/>
+           />
         <TextView
             android:id="@+id/soluong"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
+            android:padding="15dp"
             android:layout_height="wrap_content"
             android:text="1"
             android:textColor="#719A65"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textAlignment="center"
             android:layout_gravity="center"/>
 
