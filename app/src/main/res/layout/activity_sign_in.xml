@@ -69,8 +69,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:inputType="textPassword"
-                />
+                android:inputType="textPassword" />
+            <CheckBox
+                android:id="@+id/checkboxSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Nhớ mật khẩu" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </RelativeLayout>
@@ -132,22 +137,25 @@
         android:layout_marginTop="24dp"
         >
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+        <ImageButton
+            android:id="@+id/login_gg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginEnd="10dp"
             android:background="@drawable/imggg" />
 
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+        <ImageButton
+            android:id="@+id/login_fb"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
             android:background="@drawable/imgfb" />
 
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+        <ImageButton
+            android:id="@+id/login_tt"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
             android:background="@drawable/imgtwitter" />

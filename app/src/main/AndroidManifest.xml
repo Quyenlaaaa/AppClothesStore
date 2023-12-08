@@ -65,13 +65,13 @@
             android:name=".activity.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.TimKiemActivity"
-            android:exported="false" />
-        <activity
             android:name=".activity.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".activity.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.GoogleSignInActivity"
             android:exported="false" />
         <activity
             android:name=".activity.SignInActivity"
