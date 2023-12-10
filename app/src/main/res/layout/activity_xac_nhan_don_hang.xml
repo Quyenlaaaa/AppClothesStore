@@ -97,7 +97,11 @@
             android:id="@+id/lvquanao"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:layout_below="@+id/tx">
+            android:layout_below="@+id/tx"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp">
 
         </ListView>
     </RelativeLayout>
@@ -109,6 +113,10 @@
 
 
     </RelativeLayout>
+    <ScrollView
+        android:layout_below="@+id/them"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -143,6 +151,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="20dp"/>
                 <TextView
+                    android:id="@+id/tongcong"
                     android:layout_alignParentRight="true"
                     android:text="270.000đ"
                     android:layout_marginRight="20dp"
@@ -194,6 +203,7 @@
                     android:textSize="16dp"/>
 
                 <TextView
+                    android:id="@+id/tongcong2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -201,48 +211,56 @@
                     android:layout_marginRight="20dp"
                     android:text="285.000đ"/>
             </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="148dp"
-                android:padding="20dp">
-                <ImageView
-                    android:layout_alignParentLeft="true"
-                    android:id="@+id/icon_ghichu"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/baseline_assignment" />
 
-                <TextView
-                    android:id="@+id/ghichu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="25dp"
-                    android:text="Ghi chú"
-                    android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    tools:ignore="TextSizeCheck"></TextView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Không có"
-                    android:layout_marginLeft="290dp">
-                </TextView>
-                <ImageView
-                    android:layout_alignParentLeft="true"
-                    android:id="@+id/icon_right"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="350dp"
-                    android:src="@drawable/caretright" />
+                            <RelativeLayout
+                                android:id="@+id/gggg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="148dp"
+                                android:padding="20dp">
+                                <ImageView
+                                    android:layout_alignParentLeft="true"
+                                    android:id="@+id/icon_ghichu"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/baseline_assignment" />
 
-            </RelativeLayout>
+                                <TextView
+                                    android:id="@+id/ghichu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="25dp"
+                                    android:text="Ghi chú"
+                                    android:textColor="#000000"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TextSizeCheck"></TextView>
+
+
+                                <ImageView
+                                    android:layout_alignParentLeft="true"
+                                    android:id="@+id/icon_right"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="350dp"
+                                    android:src="@drawable/caretright" />
+
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_below="@+id/gggg"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp">
+
+                            </RelativeLayout>
+
 
 
 
         </RelativeLayout>
+    </ScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -263,7 +281,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnmua"
-            android:layout_width="175dp"
+            android:layout_width="135dp"
             android:layout_height="60dp"
             android:background="#A3AF60"
             android:text="Đặt đơn"

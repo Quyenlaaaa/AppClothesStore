@@ -20,7 +20,7 @@
         </TextView>
 
         <EditText
-            android:id="@+id/edittext"
+            android:id="@+id/edittexta"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_below="@+id/tieude"

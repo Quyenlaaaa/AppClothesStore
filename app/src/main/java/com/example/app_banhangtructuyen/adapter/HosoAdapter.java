@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.app_banhangtructuyen.R;
@@ -13,13 +14,14 @@ public class HosoAdapter extends BaseAdapter {
 
     Context context;
     String List[];
+    String ListValue[];
 
     LayoutInflater inflter;
-    public HosoAdapter(Context context, String[] List, int[] flags) {
+    public HosoAdapter(Context context, String[] List,String ListValue[], int[] flags) {
         super();
         this.context = context;
         this.List = List;
-
+        this.ListValue = ListValue;
         inflter	= (LayoutInflater.from(context));
     }
 
@@ -47,6 +49,8 @@ public class HosoAdapter extends BaseAdapter {
         view	=	inflter.inflate(R.layout.listhoso,null);
         TextView country = (TextView) view.findViewById(R.id.tieude);
         country.setText(List[position]);
+        EditText edt = (EditText) view.findViewById(R.id.edittexta);
+        edt.setText(ListValue[position]);
         return view;
     }
 }

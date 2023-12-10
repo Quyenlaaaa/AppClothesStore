@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CapnhatActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/back"
+            android:gravity="center"
+            android:layout_height="70dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hồ sơ"
+                android:textSize="30dp"
+                android:textStyle="bold"></TextView>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/phimback"
+
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/backve"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/caretleft"
+                android:contentDescription="Trở về"
+                android:onClick="goBack"
+                tools:ignore="TouchTargetSizeCheck" />
+            <ImageButton
+                android:id="@+id/capnhat"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/_icon__setting_2_"
+                android:layout_width="36dp"
+                android:layout_height="36dp">
+
+            </ImageButton>
+
+        </RelativeLayout>
+
+
+
+
+    <ScrollView
+        android:layout_below="@+id/phimback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/gioitinh"
+                android:paddingLeft="20dp"
+                android:hint="Giới tính:"
+                android:background="@drawable/backgredit"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+            </EditText>
+            <EditText
+                android:layout_below="@+id/gioitinh"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/diachi"
+                android:paddingLeft="20dp"
+                android:hint="Địa chỉ:"
+                android:background="@drawable/backgredit"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+            </EditText>
+            <EditText
+                android:layout_below="@+id/diachi"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/sdt"
+                android:paddingLeft="20dp"
+                android:hint="Số điện thoại:"
+                android:background="@drawable/backgredit"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+            </EditText>
+            <EditText
+                android:layout_below="@+id/sdt"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/matkhau"
+                android:paddingLeft="20dp"
+                android:hint="Mật khẩu:"
+                android:background="@drawable/backgredit"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+            </EditText>
+            <EditText
+                android:layout_below="@+id/matkhau"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/dapa"
+                android:paddingLeft="20dp"
+                android:hint="1+1=?:"
+                android:background="@drawable/backgredit"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+            </EditText>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_below="@+id/dapa"
+                android:id="@+id/btcn"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:text="Cập nhật"
+                android:layout_margin="20dp"
+                android:background="@drawable/button_dangnhap"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+            </androidx.appcompat.widget.AppCompatButton>
+            <RelativeLayout
+                android:layout_below="@id/btcn"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

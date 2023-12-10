@@ -2,26 +2,27 @@ package com.example.app_banhangtructuyen.model;
 
 public class ItemCart {
     private Product product;
-    private Integer slmua;
+    private int quantity;
 
-    public ItemCart(Product product, Integer slmua) {
+    public ItemCart(Product product, int quantity) {
         this.product = product;
-        this.slmua = slmua;
+        this.quantity = quantity; // Số lượng mặc định là 1 khi thêm mới vào giỏ hàng
     }
 
     public Product getProduct() {
         return product;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public Integer getSlmua() {
-        return slmua;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
-    public void setSlmua(Integer slmua) {
-        this.slmua = slmua;
+    public void incrementQuantity() {
+        quantity++;
     }
+
 }
