@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.HuyDonActivity">
+    tools:context=".activity.Huy">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,82 +31,14 @@
             android:textSize="20dp"
             android:textStyle="bold" />
     </LinearLayout>
-
-    <!-- Thêm các checkbox khác cho lý do 2, 3, ..., 10 tương tự -->
-
-    <CheckBox
-        android:id="@+id/checkbox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
-        android:text="Lý do 1" />
-
-    <CheckBox
-        android:id="@+id/checkbox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="160dp"
-        android:text="Lý do 2" />
-
-    <CheckBox
-        android:id="@+id/checkbox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="240dp"
-        android:text="Lý do 3" />
-
-    <CheckBox
-        android:id="@+id/checkbox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="320dp"
-        android:text="Lý do 4" />
-
-    <CheckBox
-        android:id="@+id/checkbox5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="400dp"
-        android:text="Lý do 5" />
-
-    <CheckBox
-        android:id="@+id/checkbox6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="480dp"
-        android:text="Lý do 6" />
-
-    <CheckBox
-        android:id="@+id/checkbox7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="560dp"
-        android:text="Lý do 7" />
-
-    <CheckBox
-        android:id="@+id/checkbox8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="640dp"
-        android:text="Lý do 8" />
-
-
+    <ListView
+        android:layout_marginBottom="10dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:id="@+id/lido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
