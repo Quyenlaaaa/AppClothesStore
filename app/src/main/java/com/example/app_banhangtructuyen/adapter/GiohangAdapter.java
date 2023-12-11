@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.bumptech.glide.Glide;
@@ -19,6 +20,12 @@ import com.example.app_banhangtructuyen.model.ItemCart;
 import com.example.app_banhangtructuyen.model.Product;
 import com.example.app_banhangtructuyen.model.ShoppingCart;
 import com.example.app_banhangtructuyen.model.ShoppingCartSingleton;
+import com.example.app_banhangtructuyen.model.UserSingleton;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -66,19 +73,44 @@ public class GiohangAdapter extends ArrayAdapter<ItemCart> {
                 notifyDataSetChanged();
             }
         });
-        btntru.setOnClickListener(new View.OnClickListener() {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        UserSingleton userSingleton = UserSingleton.getInstance();
+        String email = userSingleton.getUsername();
+        DatabaseReference myRef = database.getReference("Cart");
+        myRef.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onClick(View view) {
-                int newQuantity = cart.getQuantity() - 1;
-                if (newQuantity > 0) {
-                    cart.setQuantity(newQuantity);
-                    notifyDataSetChanged();
-                }else {
-                    remove(cart);
-                    notifyDataSetChanged();
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot snap:snapshot.getChildren()) {
+                    String key = snap.getKey();
+                    Product pr =snap.child("cartItems/0/product").getValue(Product.class);
+                    String emaila = snap.child("user").getValue(String.class);
+                    if( email.equals(emaila)==true && pr.getMaSP() == itemCart.getProduct().getMaSP()) {
+
+                        btntru.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                int newQuantity = cart.getQuantity() - 1;
+                                if (newQuantity > 0) {
+                                    cart.setQuantity(newQuantity);
+                                    notifyDataSetChanged();
+                                } else {
+                                    remove(cart);
+                                    myRef.child(key).removeValue();
+                                    notifyDataSetChanged();
+                                }
+                            }
+                        });
+                    }
                 }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
+
     }
     private Integer getValue(TextView text) {
 

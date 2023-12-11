@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingCart implements Serializable {
-    private List<ItemCart> cartItems;
+    private ArrayList<ItemCart> cartItems;
     public ShoppingCart() {
         cartItems = new ArrayList<>();
     }
@@ -19,7 +19,7 @@ public class ShoppingCart implements Serializable {
         for (ItemCart item : cartItems) {
             if (item.getProduct().getMaSP() == product.getMaSP()) {
                 // Nếu đã tồn tại, tăng số lượng lên
-                item.incrementQuantity();
+                //item.incrementQuantity();
                 return;
             }
         }
@@ -41,8 +41,13 @@ public class ShoppingCart implements Serializable {
         }
         return tongtien;
     }
+    public String getUser ()
+    {
+        UserSingleton userSingleton = UserSingleton.getInstance();
+        return  userSingleton.getUsername();
+    }
 
-    public List<ItemCart> getCartItems() {
+    public ArrayList<ItemCart> getCartItems() {
         return cartItems;
     }
 }

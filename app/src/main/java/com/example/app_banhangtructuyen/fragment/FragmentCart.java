@@ -19,13 +19,18 @@ import com.example.app_banhangtructuyen.R;
 import com.example.app_banhangtructuyen.activity.XacNhanDonHangActivity;
 import com.example.app_banhangtructuyen.adapter.GiohangAdapter;
 import com.example.app_banhangtructuyen.model.ItemCart;
+import com.example.app_banhangtructuyen.model.Product;
 import com.example.app_banhangtructuyen.model.ShoppingCart;
 import com.example.app_banhangtructuyen.model.ShoppingCartSingleton;
+import com.example.app_banhangtructuyen.model.UserSingleton;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,9 +44,11 @@ public class FragmentCart extends Fragment {
     private String mParam1;
     private String mParam2;
     View view;
+    GiohangAdapter adapter;
+    ArrayList<ItemCart> arrayList;
     double tongtien;
     ShoppingCart shoppingCart;
-
+    GridView gridView;
     public FragmentCart() {
         // Required empty public constructor
     }
@@ -78,11 +85,50 @@ public class FragmentCart extends Fragment {
     }
 
     private void ShowlistSanPhamGioHang() {
-        GridView gridView = (GridView) view.findViewById(R.id.grvgiohang);
-        List<ItemCart> arrayList = shoppingCart.getCartItems();
-        GiohangAdapter adapter = new GiohangAdapter(getActivity(),arrayList);
-        gridView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+        gridView = (GridView) view.findViewById(R.id.grvgiohang);
+        UserSingleton userSingleton = UserSingleton.getInstance();
+        String email = userSingleton.getUsername();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Cart");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot snap:snapshot.getChildren()) {
+                    String emaila = snap.child("user").getValue(String.class);
+                    if( email.equals(emaila)==true) {
+                        Product pr =snap.child("cartItems/0/product").getValue(Product.class);
+                        Integer quan=snap.child("cartItems/0/quantity").getValue(Integer.class);
+                        shoppingCart.addItem(pr,quan);
+
+                       //Toast.makeText(getContext(), pr.getTenSP(), Toast.LENGTH_SHORT).show();
+                       // arrayList.add(new ItemCart(pr,1));
+                        arrayList = shoppingCart.getCartItems();
+//
+                    }
+                }
+                try {
+                    adapter = new GiohangAdapter(getActivity(), arrayList);
+                    gridView.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
+                    //adapter.notifyDataSetChanged();
+                }
+                catch (Exception e) {
+                    Toast.makeText(getActivity(), "Chua co gio hang", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+
+
 
         AppCompatButton btn = view.findViewById(R.id.muangay);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -90,14 +136,9 @@ public class FragmentCart extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), XacNhanDonHangActivity.class);
                 startActivity(intent);
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("Cart");
-                myRef.setValue(arrayList, new DatabaseReference.CompletionListener() {
-                    @Override
-                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                        Toast.makeText(getActivity(), "Push data success", Toast.LENGTH_SHORT).show();
-                    }
-                });
+
+
+
             }
         });
     }

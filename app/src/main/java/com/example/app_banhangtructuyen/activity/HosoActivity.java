@@ -2,11 +2,13 @@ package com.example.app_banhangtructuyen.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -28,6 +30,14 @@ public class HosoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hoso);
+        ImageButton btcn = (ImageButton) findViewById(R.id.capnhat);
+        btcn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(HosoActivity.this,CapnhatActivity.class);
+                startActivity(it);
+            }
+        });
         simpleList	=	 (ListView)findViewById(R.id.hoso);
         TextView tendn = (TextView)findViewById(R.id.tendangnhap);
 

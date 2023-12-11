@@ -24,4 +24,5 @@ public class ItemCart {
     public void incrementQuantity() {
         quantity++;
     }
+
 }

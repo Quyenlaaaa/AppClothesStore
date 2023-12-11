@@ -42,7 +42,15 @@
                 android:contentDescription="Trở về"
                 android:onClick="goBack"
                 tools:ignore="TouchTargetSizeCheck" />
+            <ImageButton
+                android:id="@+id/capnhat"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/_icon__setting_2_"
+                android:layout_width="36dp"
+                android:layout_height="36dp">
 
+            </ImageButton>
 
         </RelativeLayout>
         <RelativeLayout

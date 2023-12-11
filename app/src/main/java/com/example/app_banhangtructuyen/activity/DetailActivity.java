@@ -1,5 +1,6 @@
 package com.example.app_banhangtructuyen.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
@@ -24,6 +25,12 @@ import com.example.app_banhangtructuyen.model.ItemCart;
 import com.example.app_banhangtructuyen.model.Product;
 import com.example.app_banhangtructuyen.model.ShoppingCart;
 import com.example.app_banhangtructuyen.model.ShoppingCartSingleton;
+import com.example.app_banhangtructuyen.model.UserSingleton;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.lang.reflect.Field;
 import java.text.DecimalFormat;
@@ -34,6 +41,8 @@ public class DetailActivity extends AppCompatActivity {
     Integer so,gia,tong;
     ImageView hinhsp;
     Product product;
+    boolean isProcessing;
+
 
     private AlertDialog alertDialog;
 
@@ -60,30 +69,68 @@ public class DetailActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                UserSingleton userSingleton = UserSingleton.getInstance();
+                String email = userSingleton.getUsername();
                 ShoppingCart shoppingCart = ShoppingCartSingleton.getInstance().getShoppingCart();
-                for (ItemCart item : shoppingCart.getCartItems()){
-                    if(item.getProduct().getMaSP() == product.getMaSP()){
-                        shoppingCart.addItem(product,Integer.parseInt(soluong.getText().toString()));
-                        Toast.makeText(DetailActivity.this,"Sản phẩm đã có trong giỏ hàng +"+ soluong.getText().toString(), Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-                }
                 shoppingCart.addItem(product,Integer.parseInt(soluong.getText().toString()));
-                AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
-                // Gắn layout cho dialog
-                View dialogView = getLayoutInflater().inflate(R.layout.showdialog_addgiohang, null);
-                builder.setView(dialogView);
-                alertDialog = builder.create();
-                alertDialog.show();
-
-                int dialogDuration = 600; // milliseconds
-
-                new Handler().postDelayed(new Runnable() {
+                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = firebaseDatabase.getReference("Cart");
+             //   myRef.push().setValue(shoppingCart);
+                ValueEventListener valueEventListener=
+                new ValueEventListener() {
                     @Override
-                    public void run() {
-                        alertDialog.dismiss();
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                        if(!isProcessing) {
+                            isProcessing = true; // Đánh dấu là đang xử lý để tránh lặp lại
+
+                            // Logic xử lý dữ liệu ở đây
+                            int a=0;
+                            for (DataSnapshot snap : snapshot.getChildren()) {
+                                Product pr = snap.child("cartItems/0/product").getValue(Product.class);
+                                String emaila = snap.child("user").getValue(String.class);
+                                if(emaila.equals(email)==true && pr.getTenSP().equals(product.getTenSP())==true) {
+                                    Toast.makeText(DetailActivity.this, "Đã tồn tại", Toast.LENGTH_SHORT).show();
+                                    a=1;
+                                    return;
+                                }
+
+
+
+
+                            }
+                            if (a==0)
+                            {
+                                myRef.push().setValue(shoppingCart);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
+                                // Gắn layout cho dialog
+                                View dialogView = getLayoutInflater().inflate(R.layout.showdialog_addgiohang, null);
+                                builder.setView(dialogView);
+                                alertDialog = builder.create();
+                                alertDialog.show();
+                                int dialogDuration = 600; // milliseconds
+
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        alertDialog.dismiss();
+                                    }
+                                }, dialogDuration);
+                                return;
+                            }
+
+                            isProcessing = false; // Đánh dấu đã xử lý xong
+                        }
+
                     }
-                }, dialogDuration);
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+
+                };
+                myRef.addValueEventListener(valueEventListener);
+
             }
 
         });
@@ -134,8 +181,6 @@ public class DetailActivity extends AppCompatActivity {
         tensanpham = (TextView) findViewById(R.id.tensp);
         hinhsp = (ImageView) findViewById(R.id.imghinhsp);
         motasanpham = (TextView) findViewById(R.id.txtmota);
-
-
     }
 
 }

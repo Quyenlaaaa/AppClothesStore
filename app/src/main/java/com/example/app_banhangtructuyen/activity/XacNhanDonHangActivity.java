@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.app_banhangtructuyen.R;
 import com.example.app_banhangtructuyen.adapter.SanPhamInDatHangAdapter;
@@ -19,6 +20,9 @@ import com.example.app_banhangtructuyen.model.ItemCart;
 import com.example.app_banhangtructuyen.model.Product;
 import com.example.app_banhangtructuyen.model.ShoppingCart;
 import com.example.app_banhangtructuyen.model.ShoppingCartSingleton;
+import com.example.app_banhangtructuyen.model.UserSingleton;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -28,7 +32,7 @@ public class XacNhanDonHangActivity extends AppCompatActivity {
     ShoppingCart shoppingCart;
     double tongtien;
     double tongtien2;
-    TextView tt, tt2;
+    TextView tt, tt2, tt3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,11 +43,29 @@ public class XacNhanDonHangActivity extends AppCompatActivity {
         tongtien2 = shoppingCart.getCountItemCart2();
         tt = (TextView) findViewById(R.id.tongcong);
         tt2 = (TextView) findViewById(R.id.tongcong2);
+        tt3 = (TextView) findViewById(R.id.tien);
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         tt.setText(decimalFormat.format(tongtien)+" đ");
         tt2.setText(decimalFormat.format(tongtien2)+" đ");
+        tt3.setText(decimalFormat.format(tongtien2)+ " đ");
         //ClickBtnMua();
         //ClickSuaThongTin();
+        ActionAddCart();
+    }
+
+    private void ActionAddCart() {
+        AppCompatButton button = (AppCompatButton) findViewById(R.id.btnmua);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserSingleton userSingleton = UserSingleton.getInstance();
+                String email = userSingleton.getUsername();
+                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = firebaseDatabase.getReference("Hoadon");
+                myRef.push().setValue(shoppingCart);
+                Toast.makeText(XacNhanDonHangActivity.this, "Đặt thành công", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void ShowListSPDM() {
