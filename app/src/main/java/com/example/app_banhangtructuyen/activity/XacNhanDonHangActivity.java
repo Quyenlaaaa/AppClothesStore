@@ -28,7 +28,7 @@ public class XacNhanDonHangActivity extends AppCompatActivity {
     ShoppingCart shoppingCart;
     double tongtien;
     double tongtien2;
-    TextView tt, tt2;
+    TextView tt, tt2, tt3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +39,11 @@ public class XacNhanDonHangActivity extends AppCompatActivity {
         tongtien2 = shoppingCart.getCountItemCart2();
         tt = (TextView) findViewById(R.id.tongcong);
         tt2 = (TextView) findViewById(R.id.tongcong2);
+        tt3 = (TextView) findViewById(R.id.tien);
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         tt.setText(decimalFormat.format(tongtien)+" đ");
         tt2.setText(decimalFormat.format(tongtien2)+" đ");
+        tt3.setText(decimalFormat.format(tongtien2)+ " đ");
         //ClickBtnMua();
         //ClickSuaThongTin();
     }
