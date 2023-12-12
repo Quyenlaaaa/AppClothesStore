@@ -16,6 +16,13 @@ public class ShoppingCart implements Serializable {
 
     public void addItem(Product product, int quantity) {
         // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+        cartItems.clear();
+
+        // Nếu chưa tồn tại, thêm mới vào giỏ hàng
+        cartItems.add(new ItemCart(product,quantity));
+    }
+    public void addItem2(Product product, int quantity) {
+        // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
         for (ItemCart item : cartItems) {
             if (item.getProduct().getMaSP() == product.getMaSP()) {
                 // Nếu đã tồn tại, tăng số lượng lên

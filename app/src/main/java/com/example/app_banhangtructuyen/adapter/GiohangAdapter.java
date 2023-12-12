@@ -86,20 +86,8 @@ public class GiohangAdapter extends ArrayAdapter<ItemCart> {
                     String emaila = snap.child("user").getValue(String.class);
                     if( email.equals(emaila)==true && pr.getMaSP() == itemCart.getProduct().getMaSP()) {
 
-                        btntru.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                int newQuantity = cart.getQuantity() - 1;
-                                if (newQuantity > 0) {
-                                    cart.setQuantity(newQuantity);
-                                    notifyDataSetChanged();
-                                } else {
-                                    remove(cart);
-                                    myRef.child(key).removeValue();
-                                    notifyDataSetChanged();
-                                }
-                            }
-                        });
+                        setOnClickListenerForCartItem(btntru, cart, key);
+                        break;
                     }
                 }
 
@@ -111,6 +99,22 @@ public class GiohangAdapter extends ArrayAdapter<ItemCart> {
             }
         });
 
+    }
+    private void setOnClickListenerForCartItem(AppCompatButton btntru, ItemCart cart, String key) {
+        btntru.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int newQuantity = cart.getQuantity() - 1;
+                if (newQuantity > 0) {
+                    cart.setQuantity(newQuantity);
+                    notifyDataSetChanged();
+                } else {
+                    remove(cart);
+                    FirebaseDatabase.getInstance().getReference("Cart").child(key).removeValue();
+                    notifyDataSetChanged();
+                }
+            }
+        });
     }
     private Integer getValue(TextView text) {
 
