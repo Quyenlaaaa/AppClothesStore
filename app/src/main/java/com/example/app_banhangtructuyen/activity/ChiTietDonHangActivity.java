@@ -109,7 +109,7 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
                     if( email.equals(emaila)==true) {
                         Product pr =snap.child("cartItems/0/product").getValue(Product.class);
                         Integer quan=snap.child("cartItems/0/quantity").getValue(Integer.class);
-                        shoppingCart.addItem(pr,quan);
+                        shoppingCart.addItem2(pr,quan);
 
                         //Toast.makeText(getContext(), pr.getTenSP(), Toast.LENGTH_SHORT).show();
                         // arrayList.add(new ItemCart(pr,1));
