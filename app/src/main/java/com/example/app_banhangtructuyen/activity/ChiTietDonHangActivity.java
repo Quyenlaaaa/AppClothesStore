@@ -1,7 +1,5 @@
 package com.example.app_banhangtructuyen.activity;
 
-import static android.system.Os.remove;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -47,6 +45,9 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chi_tiet_don_hang);
+        tenuser = findViewById(R.id.tenuser);
+        sodt = findViewById(R.id.sodt);
+        diachi = findViewById(R.id.diachi);
         shoppingCart = ShoppingCartSingleton.getInstance().getShoppingCart();
         ShowlistSanPhamChiTiet();
         tongtien = shoppingCart.getCountItemCart();
@@ -60,8 +61,29 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         UserSingleton userSingleton = UserSingleton.getInstance();
         String email = userSingleton.getUsername();
-        DatabaseReference myRef = database.getReference("Hoadon");
-        myRef.addValueEventListener(new ValueEventListener() {
+        DatabaseReference khachhang = database.getReference("Khachhang");
+        khachhang.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot snap:snapshot.getChildren())
+                {
+                    String emaila = snap.child("phone_email").getValue(String.class);
+
+                    if( email.equals(emaila)==true)
+                    {
+                        tenuser.setText(snap.child("hoTen").getValue(String.class));
+                        sodt.setText(snap.child("sodt").getValue(String.class));
+                        diachi.setText(snap.child("diaChi").getValue(String.class));
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(ChiTietDonHangActivity.this, "Lỗi xuất dữ liệu", Toast.LENGTH_SHORT);
+            }
+        });
+        DatabaseReference hoadon = database.getReference("Hoadon");
+        hoadon.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot snap:snapshot.getChildren()) {
@@ -73,7 +95,7 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 Intent intent = new Intent(ChiTietDonHangActivity.this, Huy.class);
-                                myRef.child(key).removeValue();
+                                hoadon.child(key).removeValue();
                                 startActivity(intent);
                             }
                         });
