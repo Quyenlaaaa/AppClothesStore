@@ -40,7 +40,7 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
     SanPhamInDatHangAdapter adapter;
     double tongtien;
     double tongtien2;
-    TextView tt, tt2;
+    TextView tt, tt2, tenuser, sodt, diachi;
     ItemCart itemCart;
 
     @Override

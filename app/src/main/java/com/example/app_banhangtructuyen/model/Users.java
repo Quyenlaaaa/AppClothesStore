@@ -1,6 +1,6 @@
 package com.example.app_banhangtructuyen.model;
 
-public class Khachhang{
+public class Users {
     private String hoTen;
     private String phone_email;
     private String password;
@@ -8,10 +8,10 @@ public class Khachhang{
     private  String gioitinh;
     private  String sodt;
 
-    public Khachhang() {
+    public Users() {
     }
 
-    public Khachhang(String hoTen, String phone_email, String password, String diaChi,String gioitinh,String sdt) {
+    public Users(String hoTen, String phone_email, String password, String diaChi, String gioitinh, String sdt) {
         this.hoTen = hoTen;
         this.phone_email = phone_email;
         this.password = password;
