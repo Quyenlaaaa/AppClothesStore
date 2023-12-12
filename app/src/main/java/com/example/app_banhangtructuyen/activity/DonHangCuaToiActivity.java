@@ -44,8 +44,6 @@ public class DonHangCuaToiActivity extends AppCompatActivity {
                 {
                     case 0: CheckHoaDon();
                        break;
-                    case 1: Intent myintent2 = new Intent(DonHangCuaToiActivity.this, Danhgia1.class);
-                        startActivity(myintent2); break;
                 }
             }
         });

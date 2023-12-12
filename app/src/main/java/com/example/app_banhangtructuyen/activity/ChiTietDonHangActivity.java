@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,7 +40,8 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
     double tongtien;
     double tongtien2;
     TextView tt, tt2, tenuser, sodt, diachi;
-    ItemCart itemCart;
+    ImageView back;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,14 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         tt.setText(decimalFormat.format(tongtien)+" đ");
         tt2.setText(decimalFormat.format(tongtien2)+" đ");
+        back = findViewById(R.id.backve);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChiTietDonHangActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
         AppCompatButton huyDonButton = findViewById(R.id.buttonHuyDon);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         UserSingleton userSingleton = UserSingleton.getInstance();
@@ -95,7 +105,7 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 hoadon.child(key).removeValue();
-                                Intent intent = new Intent(ChiTietDonHangActivity.this, DonHangCuaToiActivity.class);
+                                Intent intent = new Intent(ChiTietDonHangActivity.this, HomeActivity.class);
                                 startActivity(intent);
                                 Toast.makeText(ChiTietDonHangActivity.this, "Đơn hàng đã được hủy", Toast.LENGTH_SHORT).show();
                             }
@@ -147,7 +157,7 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
                     //adapter.notifyDataSetChanged();
                 }
                 catch (Exception e) {
-                    Toast.makeText(ChiTietDonHangActivity.this, "Chua co don hang", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ChiTietDonHangActivity.this, "Chưa có đơn hàng", Toast.LENGTH_SHORT).show();
                 }
             }
 

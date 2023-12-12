@@ -9,12 +9,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.app_banhangtructuyen.R;
+import com.example.app_banhangtructuyen.adapter.GiohangAdapter;
 import com.example.app_banhangtructuyen.adapter.SanPhamInDatHangAdapter;
 import com.example.app_banhangtructuyen.adapter.SanphamAdapter;
 import com.example.app_banhangtructuyen.model.ItemCart;
@@ -37,10 +39,19 @@ public class XacNhanDonHangActivity extends AppCompatActivity {
     double tongtien;
     double tongtien2;
     TextView tt, tt2, tt3, tenuser, sodt, diachi;
+    Button mua;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xac_nhan_don_hang);
+        mua = findViewById(R.id.btnmua);
+        mua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(XacNhanDonHangActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
         tenuser = findViewById(R.id.tenuser);
         sodt = findViewById(R.id.sodt);
         diachi= findViewById(R.id.diachi);
@@ -104,10 +115,6 @@ public class XacNhanDonHangActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.lvquanao);
         List<ItemCart> arrayList = shoppingCart.getCartItems();
 
-//        arrayList.add(new Product(1,"Áo khoác nam",150000,R.drawable.sanpham," ",1));
-//        arrayList.add(new Product(2,"Áo khoác nam",150000,R.drawable.sanpham," ",2));
-//        arrayList.add(new Product(3,"Áo khoác nam",150000,R.drawable.sanpham," ",3));
-//        arrayList.add(new Product(4,"Áo khoác nam",150000,R.drawable.sanpham," ",4));
         SanPhamInDatHangAdapter adapter = new SanPhamInDatHangAdapter(this,arrayList);
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
@@ -115,16 +122,6 @@ public class XacNhanDonHangActivity extends AppCompatActivity {
     public void goBack(View view){
         finish();
     }
-//    public void ClickBtnMua(){
-//        AppCompatButton button = (AppCompatButton) findViewById(R.id.btnmua);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(XacNhanDonHangActivity.this, ChiTietDonHangActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//    }
     public void ClickSuaThongTin(){
         ImageView imageView = (ImageView) findViewById(R.id.suathongtin);
         imageView.setOnClickListener(new View.OnClickListener() {
