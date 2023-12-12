@@ -81,7 +81,7 @@ public class XacNhanDonHangActivity extends AppCompatActivity {
         tt2.setText(decimalFormat.format(tongtien2)+" đ");
         tt3.setText(decimalFormat.format(tongtien2)+ " đ");
         //ClickBtnMua();
-        //ClickSuaThongTin();
+        ClickSuaThongTin();
         ActionAddCart();
     }
 
@@ -115,21 +115,22 @@ public class XacNhanDonHangActivity extends AppCompatActivity {
     public void goBack(View view){
         finish();
     }
-    public void ClickBtnMua(){
-        AppCompatButton button = (AppCompatButton) findViewById(R.id.btnmua);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(XacNhanDonHangActivity.this, ChiTietDonHangActivity.class);
-                startActivity(intent);
-            }
-        });
-    }public void ClickSuaThongTin(){
+//    public void ClickBtnMua(){
+//        AppCompatButton button = (AppCompatButton) findViewById(R.id.btnmua);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(XacNhanDonHangActivity.this, ChiTietDonHangActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//    }
+    public void ClickSuaThongTin(){
         ImageView imageView = (ImageView) findViewById(R.id.suathongtin);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(XacNhanDonHangActivity.this, SuaDiaChiNhanHangActivity.class);
+                Intent intent = new Intent(XacNhanDonHangActivity.this, CapnhatActivity.class);
                 startActivity(intent);
             }
         });

@@ -33,9 +33,8 @@
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
             android:background="@drawable/caretleft"
-            android:contentDescription="@string/action_cart"
-            android:onClick="goBack"
-            tools:ignore="TouchTargetSizeCheck"></ImageView>
+            android:contentDescription="@string/action_cart">
+        </ImageView>
     </RelativeLayout>
     <ListView
         android:layout_marginTop="20dp"

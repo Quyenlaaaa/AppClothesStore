@@ -94,9 +94,10 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
                         huyDonButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                Intent intent = new Intent(ChiTietDonHangActivity.this, Huy.class);
                                 hoadon.child(key).removeValue();
+                                Intent intent = new Intent(ChiTietDonHangActivity.this, DonHangCuaToiActivity.class);
                                 startActivity(intent);
+                                Toast.makeText(ChiTietDonHangActivity.this, "Đơn hàng đã được hủy", Toast.LENGTH_SHORT).show();
                             }
                         });
 
@@ -114,7 +115,7 @@ public class ChiTietDonHangActivity extends AppCompatActivity {
     }
 
     public void goBack(View view) {
-        finish();
+        super.finish();
     }
 
     private void ShowlistSanPhamChiTiet() {
