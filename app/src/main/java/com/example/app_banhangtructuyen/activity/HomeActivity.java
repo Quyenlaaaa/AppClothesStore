@@ -66,12 +66,4 @@ public class HomeActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
     }
-    public void addToListCartProdct(Product product){
-        listCartProduct.add(product);
-    }
-
-    // Lấy ra các sản phẩm đã thêm vào giỏ hàng
-    public List<Product> getListCartProduct() {
-        return listCartProduct;
-    }
 }

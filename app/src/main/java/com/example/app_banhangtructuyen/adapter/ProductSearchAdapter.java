@@ -54,19 +54,27 @@ public class ProductSearchAdapter extends ArrayAdapter<Product> {
     @NonNull
     @Override
     public Filter getFilter() {
-
         return new Filter() {
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
                 List<Product> listSuggest = new ArrayList<>();
 
-                if (constraint == null || constraint.length() == 0){
+                if (constraint == null || constraint.length() == 0) {
                     listSuggest.addAll(listSearchProduct);
-                }
-                else {
+                } else {
                     String filter = constraint.toString().toLowerCase().trim();
-                    for (Product p : listSearchProduct){
-                        if (p.getTenSP().toLowerCase().contains(filter)){
+                    String[] keywords = filter.split("\\s+");
+                    for (Product p : listSearchProduct) {
+                        String tenSPLowerCase = p.getTenSP().toLowerCase();
+                        boolean match = true;
+                        for (String keyword : keywords) {
+                            if (!tenSPLowerCase.contains(keyword)) {
+                                match = false;
+                                break;
+                            }
+                        }
+
+                        if (match) {
                             listSuggest.add(p);
                         }
                     }
@@ -82,15 +90,16 @@ public class ProductSearchAdapter extends ArrayAdapter<Product> {
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 clear();
-                addAll( (List<Product>) results.values);
-                notifyDataSetInvalidated();
+                addAll((List<Product>) results.values);
+                notifyDataSetChanged();
             }
 
             @Override
             public CharSequence convertResultToString(Object resultValue) {
-                return ( (Product) resultValue).getTenSP();
+                return ((Product) resultValue).getTenSP();
             }
         };
     }
+
 }
 
