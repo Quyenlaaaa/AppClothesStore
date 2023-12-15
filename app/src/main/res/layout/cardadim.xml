@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+
+    android:gravity="center">
+    <ImageView
+        android:id="@+id/imgao"
+        android:padding="5dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp">
+
+    </ImageView>
+   <LinearLayout
+       android:padding="10dp"
+       android:orientation="vertical"
+       android:maxWidth="140dp"
+
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+        <TextView
+            android:textSize="18dp"
+
+            android:id="@+id/id"
+            android:text="ID: 1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+       <TextView
+
+           android:textSize="18dp"
+           android:id="@+id/tensp"
+           android:text="Áo kaki màu vàng"
+           android:maxWidth="150dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+       </TextView>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <TextView
+               android:layout_marginBottom="5dp"
+               android:layout_alignParentBottom="true"
+               android:textSize="14dp"
+               android:text="Xem chi tiết...."
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"></TextView>
+       </RelativeLayout>
+   </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="150dp"
+        android:orientation="horizontal"
+
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/_icon__setting_2_"
+            android:layout_width="20dp"
+            android:layout_height="20dp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/_icon__danger_"
+            android:layout_width="20dp"
+            android:layout_height="20dp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonxoas"
+            android:background="@drawable/_icon__trash_"
+            android:layout_width="20dp"
+            android:layout_height="20dp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,41 +1,67 @@
 package com.example.app_banhangtructuyen.model;
 
-public class Product {
-    public int ID;
-    public String Tensanpham;
-    public Integer Dongia;
-    public int Hinhanh;
+import java.io.Serializable;
 
-    public int getID() {
-        return ID;
+public class Product implements Serializable {
+    private int MaSP;
+    private String TenSP;
+    private int Dongia;
+    private String Hinhanh;
+
+    private  int MaDM;
+    private String Mota;
+    private int Soluong;
+
+
+    public Product(){}
+    public Product(int maSP, String tenSP, int dongia, String hinhanh, int maDM, String mota, int soluong) {
+        MaSP = maSP;
+        TenSP = tenSP;
+        Dongia = dongia;
+        Hinhanh = hinhanh;
+        MaDM = maDM;
+        Mota = mota;
+        Soluong = soluong;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public int getMaSP() {
+        return MaSP;
     }
 
-    public String getTensanpham() {
-        return Tensanpham;
+    public void setMaSP(int maSP) {
+        MaSP = maSP;
     }
 
-    public void setTensanpham(String tensanpham) {
-        Tensanpham = tensanpham;
+    public String getTenSP() {
+        return TenSP;
     }
 
-    public Integer getDongia() {
+    public void setTenSP(String tenSP) {
+        TenSP = tenSP;
+    }
+
+    public int getDongia() {
         return Dongia;
     }
 
-    public void setDongia(Integer dongia) {
+    public void setDongia(int dongia) {
         Dongia = dongia;
     }
 
-    public int getHinhanh() {
+    public String getHinhanh() {
         return Hinhanh;
     }
 
-    public void setHinhanh(int hinhanh) {
+    public void setHinhanh(String hinhanh) {
         Hinhanh = hinhanh;
+    }
+
+    public int getMaDM() {
+        return MaDM;
+    }
+
+    public void setMaDM(int maDM) {
+        MaDM = maDM;
     }
 
     public String getMota() {
@@ -46,23 +72,11 @@ public class Product {
         Mota = mota;
     }
 
-    public int getIDsanpham() {
-        return IDsanpham;
+    public int getSoluong() {
+        return Soluong;
     }
 
-    public void setIDsanpham(int IDsanpham) {
-        this.IDsanpham = IDsanpham;
-    }
-
-    public String Mota;
-    public int IDsanpham;
-
-    public Product(int ID, String tensanpham, Integer dongia, int hinhanh, String mota, int IDsanpham) {
-        this.ID = ID;
-        Tensanpham = tensanpham;
-        Dongia = dongia;
-        Hinhanh = hinhanh;
-        Mota = mota;
-        this.IDsanpham = IDsanpham;
+    public void setSoluong(int soluong) {
+        Soluong = soluong;
     }
 }

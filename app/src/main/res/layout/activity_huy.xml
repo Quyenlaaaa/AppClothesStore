@@ -1,126 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.HuyDonActivity">
-
-    <LinearLayout
+    tools:context=".activity.Huy">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/back"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_height="70dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xác nhận hủy đơn đặt hàng"
+            android:textSize="25dp"
+            android:textStyle="bold"></TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/phimback"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:layout_height="60dp">
 
         <ImageView
             android:id="@+id/backve"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginEnd="60dp"
             android:background="@drawable/caretleft"
             android:contentDescription="@string/action_cart"
             android:onClick="goBack"
             tools:ignore="TouchTargetSizeCheck"></ImageView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Chọn lý do hủy"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <!-- Thêm các checkbox khác cho lý do 2, 3, ..., 10 tương tự -->
-
-    <CheckBox
-        android:id="@+id/checkbox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
-        android:text="Lý do 1" />
-
-    <CheckBox
-        android:id="@+id/checkbox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="160dp"
-        android:text="Lý do 2" />
-
-    <CheckBox
-        android:id="@+id/checkbox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="240dp"
-        android:text="Lý do 3" />
-
-    <CheckBox
-        android:id="@+id/checkbox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="320dp"
-        android:text="Lý do 4" />
-
-    <CheckBox
-        android:id="@+id/checkbox5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="400dp"
-        android:text="Lý do 5" />
-
-    <CheckBox
-        android:id="@+id/checkbox6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="480dp"
-        android:text="Lý do 6" />
-
-    <CheckBox
-        android:id="@+id/checkbox7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="560dp"
-        android:text="Lý do 7" />
-
-    <CheckBox
-        android:id="@+id/checkbox8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="640dp"
-        android:text="Lý do 8" />
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:paddingTop="16dp">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btxoa"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_margin="25dp"
-            android:background="@drawable/button_dangnhap"
-            android:text="Xác nhận hủy"
-            android:textColor="@color/white">
-        </androidx.appcompat.widget.AppCompatButton>
     </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/mainxtk"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/phimback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/noidung"
+            android:layout_width="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/anhtren"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/chu"
+                android:layout_below="@+id/anhtren"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="top"
+                    android:text="Chúng tôi rất tiếc. Bạn chắc chắn muốn hủy đơn hàng!"
+                    android:textSize="24sp"
+                    android:textStyle="bold"></TextView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/noidung"
+            android:layout_height="100dp"
+            android:layout_marginTop="300dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btxoa"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_dangnhap"
+                android:text="Xác nhận"
+                android:textColor="@color/white">
+
+            </androidx.appcompat.widget.AppCompatButton>
+        </RelativeLayout>
+    </RelativeLayout>
+
 </RelativeLayout>

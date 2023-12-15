@@ -13,12 +13,19 @@ import com.example.app_banhangtructuyen.fragment.FragmentCart;
 import com.example.app_banhangtructuyen.fragment.FragmentHome;
 import com.example.app_banhangtructuyen.fragment.FragmentThongBao;
 import com.example.app_banhangtructuyen.fragment.FragmentUser;
+import com.example.app_banhangtructuyen.model.Product;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
     BottomNavigationView bottomnav;
+    private List<Product> listCartProduct;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
